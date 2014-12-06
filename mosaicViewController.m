@@ -136,9 +136,9 @@
     //    blueImageView.frame = rect;
     //    [self.view addSubview:blueImageView];
     
-    UIImage *shakeImage = [UIImage imageNamed:@"shake.png"];
+    UIImage *shakeImage = [UIImage imageNamed:@"shakeView.png"];
     shakeImageView = [[UIImageView alloc] initWithImage:shakeImage];
-    CGRect shakeRect = CGRectMake(40, 440, 240, 62);
+    CGRect shakeRect = CGRectMake(40, 460, 240, 71);
     shakeImageView.frame = shakeRect;
     [self.view addSubview:shakeImageView];
     
@@ -407,6 +407,8 @@
     
     
     
+    
+    
 }
 
 - (UIImage *)captureView {
@@ -434,9 +436,12 @@
                                       [SVProgressHUD showSuccessWithStatus:@"保存成功!"];
                                       //[SVProgressHUD dismiss];
                                   }
-                                  
+                                      }
+
+ 
                               }];
     
+       
 }
 
 -(BOOL)canBecomeFirstResponder { return YES; }
