@@ -138,12 +138,18 @@
     
     UIImage *shakeImage = [UIImage imageNamed:@"shakeView.png"];
     shakeImageView = [[UIImageView alloc] initWithImage:shakeImage];
-    CGRect shakeRect = CGRectMake(40, 460, 240, 71);
+    CGRect shakeRect = CGRectMake(40, 465, 240, 71);
     shakeImageView.frame = shakeRect;
     [self.view addSubview:shakeImageView];
     
     imgView.image = image;//選択した画像に差し替える
     [self.view bringSubviewToFront:imgView];
+    
+    //枠線
+    imgView.layer.borderWidth = 1.0f;
+    //枠線の色
+    imgView.layer.borderColor = [[UIColor whiteColor] CGColor];
+
     
     
     
@@ -179,7 +185,7 @@
     } else {
         NSLog(@"NO( ･ω･)");
     }
-
+    
     
 }
 
@@ -383,6 +389,7 @@
                 //UIImageViewのサイズと位置を設定
                 imageView.frame = CGRectMake(x+0,y+110 ,pixelSize,pixelSize);
                 imageView.image = image;
+                
                 //画面に貼り付ける
                 [self.view addSubview:imageView];
                 
@@ -405,11 +412,8 @@
     // Sub view がいくつあるか表示する
     NSLog(@"Number of subviews: %lu", (unsigned long)self.view.subviews.count);
     
-    
-    
-    
-    
 }
+
 
 - (UIImage *)captureView {
     
@@ -436,15 +440,13 @@
                                       [SVProgressHUD showSuccessWithStatus:@"保存成功!"];
                                       //[SVProgressHUD dismiss];
                                   }
-                                      }
-
- 
                               }];
     
-       
+    
 }
 
 -(BOOL)canBecomeFirstResponder { return YES; }
+
 
 
 #pragma mark - MotionBegan
@@ -467,6 +469,9 @@
     
     //[self makeMosaic];
     
+    
+    
+    /* --- 戻るボタン --- */
     UIImage *backButtonImage = [UIImage imageNamed:@"yazirushi.png"];
     backButton = [[UIButton alloc] initWithFrame:CGRectMake(16, 52, 35, 30)];
     
@@ -477,14 +482,17 @@
     
     
     
+    /* --- Twitter --- */
     UIImage *twButtonImage = [UIImage imageNamed:@"Twitter.png"];
     twitterButton = [[UIButton alloc] initWithFrame:CGRectMake(130, 469, 60, 60)];
     
     [twitterButton setBackgroundImage:twButtonImage forState:UIControlStateNormal];  // 画像をセットする
-    
     [twitterButton addTarget:self action:@selector(twitterButton:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:twitterButton];
     
+    
+    
+    /* --- Facebook --- */
     UIImage *fbButtonImage = [UIImage imageNamed:@"Facebook.png"];
     facebookButton = [[UIButton alloc] initWithFrame:CGRectMake(38, 469, 60, 60)];
     
@@ -493,6 +501,8 @@
     [facebookButton addTarget:self action:@selector(facebookButton:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:facebookButton];
     
+    
+    /* --- LINE --- */
     UIImage *lnButtonImage = [UIImage imageNamed:@"LINE.png"];
     lineButton = [[UIButton alloc] initWithFrame:CGRectMake(220, 469, 60, 60)];
     
