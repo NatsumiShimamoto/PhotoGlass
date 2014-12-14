@@ -54,12 +54,12 @@
 		DD1A03B31A331BF200C89E1A /* shakeView.png in Resources */ = {isa = PBXBuildFile; fileRef = DD1A03B21A331BF200C89E1A /* shakeView.png */; };
 		DD1A03BE1A33212300C89E1A /* splash960_640.png in Resources */ = {isa = PBXBuildFile; fileRef = DD1A03BC1A33212300C89E1A /* splash960_640.png */; };
 		DD1A03BF1A33212300C89E1A /* splash1136_640.png in Resources */ = {isa = PBXBuildFile; fileRef = DD1A03BD1A33212300C89E1A /* splash1136_640.png */; };
+		DD32182B1A3D982B006AEDA8 /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = DD32182A1A3D982B006AEDA8 /* SVProgressHUD.bundle */; };
+		DD32182E1A3D9834006AEDA8 /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = DD32182D1A3D9834006AEDA8 /* SVProgressHUD.m */; };
 		DDD9D1BB1A3D21CB00E59BD0 /* Storyboard_3.5inch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDD9D1BA1A3D21CB00E59BD0 /* Storyboard_3.5inch.storyboard */; };
 		DDD9D1BD1A3D220500E59BD0 /* Storyboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDD9D1BC1A3D220500E59BD0 /* Storyboard_iPad.storyboard */; };
 		DDF559D01A3D46C900D6412D /* sandglass_4.png in Resources */ = {isa = PBXBuildFile; fileRef = DDF559CE1A3D46C900D6412D /* sandglass_4.png */; };
 		DDF559D11A3D46C900D6412D /* sandglass_iPad.png in Resources */ = {isa = PBXBuildFile; fileRef = DDF559CF1A3D46C900D6412D /* sandglass_iPad.png */; };
-		DDF559D81A3D73CA00D6412D /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = DDF559D71A3D73CA00D6412D /* SVProgressHUD.bundle */; };
-		DDF559DB1A3D73DF00D6412D /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = DDF559DA1A3D73DF00D6412D /* SVProgressHUD.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -139,13 +139,14 @@
 		DD1A03B21A331BF200C89E1A /* shakeView.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shakeView.png; sourceTree = "<group>"; };
 		DD1A03BC1A33212300C89E1A /* splash960_640.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = splash960_640.png; sourceTree = "<group>"; };
 		DD1A03BD1A33212300C89E1A /* splash1136_640.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = splash1136_640.png; sourceTree = "<group>"; };
+		DD32182A1A3D982B006AEDA8 /* SVProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SVProgressHUD.bundle; sourceTree = "<group>"; };
+		DD32182C1A3D9834006AEDA8 /* SVProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVProgressHUD.h; sourceTree = "<group>"; };
+		DD32182D1A3D9834006AEDA8 /* SVProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVProgressHUD.m; sourceTree = "<group>"; };
+		DD32182F1A3D983C006AEDA8 /* SVProgressHUD-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SVProgressHUD-Prefix.pch"; sourceTree = "<group>"; };
 		DDD9D1BA1A3D21CB00E59BD0 /* Storyboard_3.5inch.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard_3.5inch.storyboard; sourceTree = "<group>"; };
 		DDD9D1BC1A3D220500E59BD0 /* Storyboard_iPad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard_iPad.storyboard; sourceTree = "<group>"; };
 		DDF559CE1A3D46C900D6412D /* sandglass_4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sandglass_4.png; sourceTree = "<group>"; };
 		DDF559CF1A3D46C900D6412D /* sandglass_iPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sandglass_iPad.png; sourceTree = "<group>"; };
-		DDF559D71A3D73CA00D6412D /* SVProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SVProgressHUD.bundle; sourceTree = "<group>"; };
-		DDF559D91A3D73DF00D6412D /* SVProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVProgressHUD.h; sourceTree = "<group>"; };
-		DDF559DA1A3D73DF00D6412D /* SVProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVProgressHUD.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -242,10 +243,9 @@
 		1BB1F84819B6170300CDF45F /* PhotoGlass */ = {
 			isa = PBXGroup;
 			children = (
-				DD6227D519FCD62200DD15BE /* Libs */,
-				DDF559DC1A3D73E400D6412D /* SVProgressHUD_iOS5 */,
 				DDF559DD1A3D746A00D6412D /* WSCoachMarksView */,
 				1B8E02C019D1623700584489 /* ELCImagePicker */,
+				DD3218301A3D983F006AEDA8 /* SVProgressHUD */,
 				1BB1F85119B6170300CDF45F /* AppDelegate.h */,
 				1BB1F85219B6170300CDF45F /* AppDelegate.m */,
 				1BB1F87D19B617CF00CDF45F /* Image.h */,
@@ -335,21 +335,15 @@
 			name = splash;
 			sourceTree = "<group>";
 		};
-		DD6227D519FCD62200DD15BE /* Libs */ = {
+		DD3218301A3D983F006AEDA8 /* SVProgressHUD */ = {
 			isa = PBXGroup;
 			children = (
+				DD32182C1A3D9834006AEDA8 /* SVProgressHUD.h */,
+				DD32182D1A3D9834006AEDA8 /* SVProgressHUD.m */,
+				DD32182F1A3D983C006AEDA8 /* SVProgressHUD-Prefix.pch */,
+				DD32182A1A3D982B006AEDA8 /* SVProgressHUD.bundle */,
 			);
-			name = Libs;
-			sourceTree = "<group>";
-		};
-		DDF559DC1A3D73E400D6412D /* SVProgressHUD_iOS5 */ = {
-			isa = PBXGroup;
-			children = (
-				DDF559D71A3D73CA00D6412D /* SVProgressHUD.bundle */,
-				DDF559D91A3D73DF00D6412D /* SVProgressHUD.h */,
-				DDF559DA1A3D73DF00D6412D /* SVProgressHUD.m */,
-			);
-			name = SVProgressHUD_iOS5;
+			name = SVProgressHUD;
 			sourceTree = "<group>";
 		};
 		DDF559DD1A3D746A00D6412D /* WSCoachMarksView */ = {
@@ -440,7 +434,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DDF559D81A3D73CA00D6412D /* SVProgressHUD.bundle in Resources */,
 				DD1A03BE1A33212300C89E1A /* splash960_640.png in Resources */,
 				1BC3C47219C07BB5004D58C7 /* LINE.png in Resources */,
 				1BB1F89D19B6181600CDF45F /* batsu.png in Resources */,
@@ -460,6 +453,7 @@
 				1B8E02A219CF1D3500584489 /* sanset.png in Resources */,
 				DDD9D1BD1A3D220500E59BD0 /* Storyboard_iPad.storyboard in Resources */,
 				DDD9D1BB1A3D21CB00E59BD0 /* Storyboard_3.5inch.storyboard in Resources */,
+				DD32182B1A3D982B006AEDA8 /* SVProgressHUD.bundle in Resources */,
 				1BB708BC19D59FF200B876CF /* sandglass.png in Resources */,
 				1BC3C47319C07BB5004D58C7 /* Twitter.png in Resources */,
 				1BB708C019D5AB1400B876CF /* 砂.gif in Resources */,
@@ -484,13 +478,13 @@
 			files = (
 				1BB1F88519B617E400CDF45F /* UIImage+GIF.m in Sources */,
 				1B8E02B819D161D900584489 /* ELCAsset.m in Sources */,
+				DD32182E1A3D9834006AEDA8 /* SVProgressHUD.m in Sources */,
 				1B8E02BC19D161D900584489 /* ELCConsole.m in Sources */,
 				1B8E02BD19D161D900584489 /* ELCOverlayImageView.m in Sources */,
 				1B8E02B719D161D900584489 /* ELCAlbumPickerController.m in Sources */,
 				1BB1F87C19B6179F00CDF45F /* mosaicViewController.m in Sources */,
 				1B8E02BA19D161D900584489 /* ELCAssetTablePicker.m in Sources */,
 				1B8E02BB19D161D900584489 /* ELCImagePickerController.m in Sources */,
-				DDF559DB1A3D73DF00D6412D /* SVProgressHUD.m in Sources */,
 				1BB1F85319B6170300CDF45F /* AppDelegate.m in Sources */,
 				1BB1F87919B6178700CDF45F /* sandGlassViewController.m in Sources */,
 				1BB1F84F19B6170300CDF45F /* main.m in Sources */,

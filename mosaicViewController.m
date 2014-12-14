@@ -545,12 +545,11 @@
         
     }
     
-
-   
     [twitterButton setBackgroundImage:twButtonImage forState:UIControlStateNormal];  // 画像をセットする
     [twitterButton addTarget:self action:@selector(twitterButton:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:twitterButton];
     
+    NSLog(@"tuitta");
     
     
     /* --- Facebook --- */
@@ -620,6 +619,7 @@
 
 -(void)twitterButton:(UIButton*)button{
     //ServiceTypeをTwitterに設定
+    
     NSString *serviceType = SLServiceTypeTwitter;
     //Twitterが利用可能かチェック
     if([SLComposeViewController isAvailableForServiceType:serviceType]){
@@ -676,6 +676,7 @@
     
 }
 -(void)lineButton:(UIButton*)button{
+    
     // 投稿したい画像イメージをtmpImageへ格納する
     UIImage *tmpImage = captureImg;
     
