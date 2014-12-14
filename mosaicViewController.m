@@ -141,11 +141,11 @@
     shakeImageView = [[UIImageView alloc] initWithImage:shakeImage];
     
     if([[UIScreen mainScreen] bounds].size.height==480){ //iPhone4,4s,iPod Touch第4世代
-        CGRect shakeRect = CGRectMake(70, 407, 180, 61);
+        CGRect shakeRect = CGRectMake(70, 415, 170, 51);
         shakeImageView.frame = shakeRect;
         
     }else if([[UIScreen mainScreen] bounds].size.height==568){ //iPhone5,5s,iPod Touch第5世代
-        CGRect shakeRect = CGRectMake(40, 540, 240, 71);
+        CGRect shakeRect = CGRectMake(40, 465, 240, 71);
         shakeImageView.frame = shakeRect;
         
     }else if([[UIScreen mainScreen] bounds].size.height==1024){ //iPad
@@ -228,7 +228,7 @@
     //カメラロールから画像を読み取って、色情報を配列に格納して、格納後モザイクアートを作成する
     [self inputCamera];
     
-    shakeImageView.hidden = YES;
+    
 }
 
 
@@ -494,7 +494,7 @@
     
     //remove MaskView
     [self removeMarksView];
-    
+    shakeImageView.hidden = YES;
     
     [SVProgressHUD showWithStatus:@"作成中..." maskType:SVProgressHUDMaskTypeGradient];
     
@@ -511,7 +511,7 @@
     
     
     if([[UIScreen mainScreen] bounds].size.height==480){ //iPhone4,4s,iPod Touch第4世代
-        backButton = [[UIButton alloc] initWithFrame:CGRectMake(20, 25, 35, 30)];
+        backButton = [[UIButton alloc] initWithFrame:CGRectMake(20, 35, 35, 30)];
         
     }else if([[UIScreen mainScreen] bounds].size.height==568){ //iPhone5,5s,iPod Touch第5世代
         backButton = [[UIButton alloc] initWithFrame:CGRectMake(16, 52, 35, 30)];
@@ -535,7 +535,7 @@
     
     
     if([[UIScreen mainScreen] bounds].size.height==480){ //iPhone4,4s,iPod Touch第4世代
-        twitterButton = [[UIButton alloc] initWithFrame:CGRectMake(130, 412, 50, 50)];
+        twitterButton = [[UIButton alloc] initWithFrame:CGRectMake(130, 415, 50, 50)];
         
     }else if([[UIScreen mainScreen] bounds].size.height==568){ //iPhone5,5s,iPod Touch第5世代
         twitterButton = [[UIButton alloc] initWithFrame:CGRectMake(130, 469, 60, 60)];
@@ -558,7 +558,7 @@
     
     
     if([[UIScreen mainScreen] bounds].size.height==480){ //iPhone4,4s,iPod Touch第4世代
-        facebookButton = [[UIButton alloc] initWithFrame:CGRectMake(38, 412, 50, 50)];
+        facebookButton = [[UIButton alloc] initWithFrame:CGRectMake(38, 415, 50, 50)];
 
         
     }else if([[UIScreen mainScreen] bounds].size.height==568){ //iPhone5,5s,iPod Touch第5世代
@@ -581,7 +581,7 @@
     UIImage *lnButtonImage = [UIImage imageNamed:@"LINE.png"];
     
     if([[UIScreen mainScreen] bounds].size.height==480){ //iPhone4,4s,iPod Touch第4世代
-        lineButton = [[UIButton alloc] initWithFrame:CGRectMake(220, 412, 50, 50)];
+        lineButton = [[UIButton alloc] initWithFrame:CGRectMake(220, 415, 50, 50)];
 
     }else if([[UIScreen mainScreen] bounds].size.height==568){ //iPhone5,5s,iPod Touch第5世代
          lineButton = [[UIButton alloc] initWithFrame:CGRectMake(220, 469, 60, 60)];

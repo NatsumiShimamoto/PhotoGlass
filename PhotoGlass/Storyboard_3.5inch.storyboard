@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="5gW-Kn-G5I">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="5gW-Kn-G5I">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
@@ -9,6 +9,10 @@
         <scene sceneID="XZ3-Gx-nIu">
             <objects>
                 <viewController id="5gW-Kn-G5I" customClass="sandGlassViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Tjw-us-B3E"/>
+                        <viewControllerLayoutGuide type="bottom" id="HeU-0D-N6n"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="uUd-UE-n7X">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -24,17 +28,19 @@
         <scene sceneID="P9T-e7-d6x">
             <objects>
                 <viewController storyboardIdentifier="mosaic" id="JLh-yQ-3dk" customClass="mosaicViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="wfP-N2-SmA"/>
+                        <viewControllerLayoutGuide type="bottom" id="7Mc-FQ-dkd"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="I6X-M5-Cuu">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="砂時計なし背景.png" id="8NR-Yy-HF8">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="砂時計なし背景.png" translatesAutoresizingMaskIntoConstraints="NO" id="8NR-Yy-HF8">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="KjA-13-kNv">
-                                <rect key="frame" x="0.0" y="75" width="320" height="320"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KjA-13-kNv">
+                                <rect key="frame" x="0.0" y="80" width="320" height="320"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

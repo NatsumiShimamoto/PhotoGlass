@@ -14,8 +14,6 @@
 
 
 @interface sandGlassViewController : UIViewController<UINavigationControllerDelegate, UIImagePickerControllerDelegate, UIAccelerometerDelegate>{
-
-
     
     UIImage *back;
     UIImage *suna;
