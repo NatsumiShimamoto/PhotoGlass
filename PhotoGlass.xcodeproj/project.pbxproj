@@ -54,12 +54,12 @@
 		DD1A03B31A331BF200C89E1A /* shakeView.png in Resources */ = {isa = PBXBuildFile; fileRef = DD1A03B21A331BF200C89E1A /* shakeView.png */; };
 		DD1A03BE1A33212300C89E1A /* splash960_640.png in Resources */ = {isa = PBXBuildFile; fileRef = DD1A03BC1A33212300C89E1A /* splash960_640.png */; };
 		DD1A03BF1A33212300C89E1A /* splash1136_640.png in Resources */ = {isa = PBXBuildFile; fileRef = DD1A03BD1A33212300C89E1A /* splash1136_640.png */; };
-		DD6227DB19FCD65600DD15BE /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = DD6227D819FCD65600DD15BE /* SVProgressHUD.bundle */; };
-		DD6227DC19FCD65600DD15BE /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = DD6227DA19FCD65600DD15BE /* SVProgressHUD.m */; };
 		DDD9D1BB1A3D21CB00E59BD0 /* Storyboard_3.5inch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDD9D1BA1A3D21CB00E59BD0 /* Storyboard_3.5inch.storyboard */; };
 		DDD9D1BD1A3D220500E59BD0 /* Storyboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDD9D1BC1A3D220500E59BD0 /* Storyboard_iPad.storyboard */; };
 		DDF559D01A3D46C900D6412D /* sandglass_4.png in Resources */ = {isa = PBXBuildFile; fileRef = DDF559CE1A3D46C900D6412D /* sandglass_4.png */; };
 		DDF559D11A3D46C900D6412D /* sandglass_iPad.png in Resources */ = {isa = PBXBuildFile; fileRef = DDF559CF1A3D46C900D6412D /* sandglass_iPad.png */; };
+		DDF559D81A3D73CA00D6412D /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = DDF559D71A3D73CA00D6412D /* SVProgressHUD.bundle */; };
+		DDF559DB1A3D73DF00D6412D /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = DDF559DA1A3D73DF00D6412D /* SVProgressHUD.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -139,14 +139,13 @@
 		DD1A03B21A331BF200C89E1A /* shakeView.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shakeView.png; sourceTree = "<group>"; };
 		DD1A03BC1A33212300C89E1A /* splash960_640.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = splash960_640.png; sourceTree = "<group>"; };
 		DD1A03BD1A33212300C89E1A /* splash1136_640.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = splash1136_640.png; sourceTree = "<group>"; };
-		DD6227D719FCD65600DD15BE /* SVProgressHUD-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SVProgressHUD-Prefix.pch"; sourceTree = "<group>"; };
-		DD6227D819FCD65600DD15BE /* SVProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SVProgressHUD.bundle; sourceTree = "<group>"; };
-		DD6227D919FCD65600DD15BE /* SVProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVProgressHUD.h; sourceTree = "<group>"; };
-		DD6227DA19FCD65600DD15BE /* SVProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVProgressHUD.m; sourceTree = "<group>"; };
 		DDD9D1BA1A3D21CB00E59BD0 /* Storyboard_3.5inch.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard_3.5inch.storyboard; sourceTree = "<group>"; };
 		DDD9D1BC1A3D220500E59BD0 /* Storyboard_iPad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard_iPad.storyboard; sourceTree = "<group>"; };
 		DDF559CE1A3D46C900D6412D /* sandglass_4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sandglass_4.png; sourceTree = "<group>"; };
 		DDF559CF1A3D46C900D6412D /* sandglass_iPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sandglass_iPad.png; sourceTree = "<group>"; };
+		DDF559D71A3D73CA00D6412D /* SVProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SVProgressHUD.bundle; sourceTree = "<group>"; };
+		DDF559D91A3D73DF00D6412D /* SVProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVProgressHUD.h; sourceTree = "<group>"; };
+		DDF559DA1A3D73DF00D6412D /* SVProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVProgressHUD.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -244,8 +243,8 @@
 			isa = PBXGroup;
 			children = (
 				DD6227D519FCD62200DD15BE /* Libs */,
-				1B5F376619D2B0E3005D5F94 /* WSCoachMarksView.h */,
-				1B5F376719D2B0E3005D5F94 /* WSCoachMarksView.m */,
+				DDF559DC1A3D73E400D6412D /* SVProgressHUD_iOS5 */,
+				DDF559DD1A3D746A00D6412D /* WSCoachMarksView */,
 				1B8E02C019D1623700584489 /* ELCImagePicker */,
 				1BB1F85119B6170300CDF45F /* AppDelegate.h */,
 				1BB1F85219B6170300CDF45F /* AppDelegate.m */,
@@ -339,20 +338,27 @@
 		DD6227D519FCD62200DD15BE /* Libs */ = {
 			isa = PBXGroup;
 			children = (
-				DD6227D619FCD65600DD15BE /* SVProgressHUD */,
 			);
 			name = Libs;
 			sourceTree = "<group>";
 		};
-		DD6227D619FCD65600DD15BE /* SVProgressHUD */ = {
+		DDF559DC1A3D73E400D6412D /* SVProgressHUD_iOS5 */ = {
 			isa = PBXGroup;
 			children = (
-				DD6227D719FCD65600DD15BE /* SVProgressHUD-Prefix.pch */,
-				DD6227D819FCD65600DD15BE /* SVProgressHUD.bundle */,
-				DD6227D919FCD65600DD15BE /* SVProgressHUD.h */,
-				DD6227DA19FCD65600DD15BE /* SVProgressHUD.m */,
+				DDF559D71A3D73CA00D6412D /* SVProgressHUD.bundle */,
+				DDF559D91A3D73DF00D6412D /* SVProgressHUD.h */,
+				DDF559DA1A3D73DF00D6412D /* SVProgressHUD.m */,
 			);
-			path = SVProgressHUD;
+			name = SVProgressHUD_iOS5;
+			sourceTree = "<group>";
+		};
+		DDF559DD1A3D746A00D6412D /* WSCoachMarksView */ = {
+			isa = PBXGroup;
+			children = (
+				1B5F376619D2B0E3005D5F94 /* WSCoachMarksView.h */,
+				1B5F376719D2B0E3005D5F94 /* WSCoachMarksView.m */,
+			);
+			name = WSCoachMarksView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -434,6 +440,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DDF559D81A3D73CA00D6412D /* SVProgressHUD.bundle in Resources */,
 				DD1A03BE1A33212300C89E1A /* splash960_640.png in Resources */,
 				1BC3C47219C07BB5004D58C7 /* LINE.png in Resources */,
 				1BB1F89D19B6181600CDF45F /* batsu.png in Resources */,
@@ -457,7 +464,6 @@
 				1BC3C47319C07BB5004D58C7 /* Twitter.png in Resources */,
 				1BB708C019D5AB1400B876CF /* 砂.gif in Resources */,
 				1B7E763319D57F5200966A20 /* 砂時計なし背景.png in Resources */,
-				DD6227DB19FCD65600DD15BE /* SVProgressHUD.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -478,13 +484,13 @@
 			files = (
 				1BB1F88519B617E400CDF45F /* UIImage+GIF.m in Sources */,
 				1B8E02B819D161D900584489 /* ELCAsset.m in Sources */,
-				DD6227DC19FCD65600DD15BE /* SVProgressHUD.m in Sources */,
 				1B8E02BC19D161D900584489 /* ELCConsole.m in Sources */,
 				1B8E02BD19D161D900584489 /* ELCOverlayImageView.m in Sources */,
 				1B8E02B719D161D900584489 /* ELCAlbumPickerController.m in Sources */,
 				1BB1F87C19B6179F00CDF45F /* mosaicViewController.m in Sources */,
 				1B8E02BA19D161D900584489 /* ELCAssetTablePicker.m in Sources */,
 				1B8E02BB19D161D900584489 /* ELCImagePickerController.m in Sources */,
+				DDF559DB1A3D73DF00D6412D /* SVProgressHUD.m in Sources */,
 				1BB1F85319B6170300CDF45F /* AppDelegate.m in Sources */,
 				1BB1F87919B6178700CDF45F /* sandGlassViewController.m in Sources */,
 				1BB1F84F19B6170300CDF45F /* main.m in Sources */,
@@ -572,7 +578,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 			};
@@ -604,7 +610,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -613,6 +619,11 @@
 		1BB1F87219B6170300CDF45F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = (
+					ARM,
+					32,
+					"$(ARCHS_STANDARD)",
+				);
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -620,6 +631,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PhotoGlass/PhotoGlass-Prefix.pch";
 				INFOPLIST_FILE = "PhotoGlass/PhotoGlass-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
@@ -629,6 +641,11 @@
 		1BB1F87319B6170300CDF45F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = (
+					ARM,
+					32,
+					"$(ARCHS_STANDARD)",
+				);
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -636,6 +653,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PhotoGlass/PhotoGlass-Prefix.pch";
 				INFOPLIST_FILE = "PhotoGlass/PhotoGlass-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;

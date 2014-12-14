@@ -13,7 +13,6 @@
 #import "WSCoachMarksView.h"
 
 
-
 @interface sandGlassViewController : UIViewController<UINavigationControllerDelegate, UIImagePickerControllerDelegate, UIAccelerometerDelegate>{
 
 

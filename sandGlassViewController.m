@@ -66,14 +66,6 @@
     }
     
     
-    
-    
-    
-    
-    
-    
-    
-    
     //gifアニメーション
     UIImage *sunaImage = [UIImage animatedGIFNamed:@"砂"];
     sunaImageView = [[UIImageView alloc] initWithImage:sunaImage];

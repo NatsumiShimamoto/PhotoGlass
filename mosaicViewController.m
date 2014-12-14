@@ -15,6 +15,7 @@
 
 #import "SVProgressHUD.h"
 
+
 @interface mosaicViewController ()
 {
     AppDelegate *delegate;
@@ -138,8 +139,22 @@
     
     UIImage *shakeImage = [UIImage imageNamed:@"shakeView.png"];
     shakeImageView = [[UIImageView alloc] initWithImage:shakeImage];
-    CGRect shakeRect = CGRectMake(40, 465, 240, 71);
-    shakeImageView.frame = shakeRect;
+    
+    if([[UIScreen mainScreen] bounds].size.height==480){ //iPhone4,4s,iPod Touch第4世代
+        CGRect shakeRect = CGRectMake(70, 407, 180, 61);
+        shakeImageView.frame = shakeRect;
+        
+    }else if([[UIScreen mainScreen] bounds].size.height==568){ //iPhone5,5s,iPod Touch第5世代
+        CGRect shakeRect = CGRectMake(40, 540, 240, 71);
+        shakeImageView.frame = shakeRect;
+        
+    }else if([[UIScreen mainScreen] bounds].size.height==1024){ //iPad
+        CGRect shakeRect = CGRectMake(40, 465, 240, 71);
+        shakeImageView.frame = shakeRect;
+    }
+    
+    
+    
     [self.view addSubview:shakeImageView];
     
     imgView.image = image;//選択した画像に差し替える
@@ -149,7 +164,7 @@
     imgView.layer.borderWidth = 1.0f;
     //枠線の色
     imgView.layer.borderColor = [[UIColor whiteColor] CGColor];
-
+    
     
     
     
@@ -168,6 +183,9 @@
         coachMarks = @[
                        @{@"rect":[NSValue valueWithCGRect:(CGRect){{0,0},{0,0}}], @"caption": @"選んだ写真をモザイクアートにするためにiPhoneを振ってください"}
                        ];
+        
+        
+        
         
         
         // WSCoachMarksViewオブジェクトの作成
@@ -223,7 +241,7 @@
                                
                                //カメラロール内のすべてのアルバムが列挙される
                                if (group) {
-                                   
+                                   NSLog(@"おーーーい");
                                    //アルバム名がMosaicと同一だった時の処理
                                    if ([AlbumName compare:[group valueForProperty:ALAssetsGroupPropertyName]] == NSOrderedSame) {
                                        
@@ -240,11 +258,13 @@
                                                                                rect:CGRectMake(0, 0, 10, 10)];
                                                [cameraArr addObject:[self checkColor:sampleImage]];
                                                
+
                                            }else{
                                                //画像の格納が終了した時に呼ばれる
                                                //モザイクアートを作成する
                                                [self makeMozaiku];
-                                           }
+                                               
+                                                                                         }
                                            
                                        };
                                        
@@ -355,6 +375,8 @@
     int pixelSize = 320/imgView.image.size.width;//ピクセルの大きさ
     //各ピクセルを類似したカメラロールの画像に置き換える
     for (int i=0; i<imageWidth*imageHeight; i++) {
+        
+        NSLog(@"ふぉおおおおおお");
         float min_value = 999;
         
         NSLog(@"今=%d/%d",i+1,imageWidth*imageHeight);
@@ -395,6 +417,8 @@
                 
                 // 後々取り除くために保存
                 [imageViewList addObject:imageView];
+                
+               
             }
         }
         
@@ -435,12 +459,17 @@
     [savelibrary writeImageToSavedPhotosAlbum:[self captureView].CGImage
                                      metadata:nil
                               completionBlock:^(NSURL *assetURL, NSError *error){
+                                  
+                                  
                                   if(!error){
                                       NSLog(@"保存成功");
                                       [SVProgressHUD showSuccessWithStatus:@"保存成功!"];
-                                      //[SVProgressHUD dismiss];
                                   }
-                              }];
+                                  
+                                  
+                              }
+     
+     ];
     
     
 }
@@ -465,7 +494,13 @@
     
     //remove MaskView
     [self removeMarksView];
-    [SVProgressHUD showWithStatus:@"作成中..." maskType:SVProgressHUDMaskTypeGradient];//SVProgressHUD
+    
+    
+    [SVProgressHUD showWithStatus:@"作成中..." maskType:SVProgressHUDMaskTypeGradient];
+    
+    
+    
+    
     
     //[self makeMosaic];
     
@@ -473,7 +508,20 @@
     
     /* --- 戻るボタン --- */
     UIImage *backButtonImage = [UIImage imageNamed:@"yazirushi.png"];
-    backButton = [[UIButton alloc] initWithFrame:CGRectMake(16, 52, 35, 30)];
+    
+    
+    if([[UIScreen mainScreen] bounds].size.height==480){ //iPhone4,4s,iPod Touch第4世代
+        backButton = [[UIButton alloc] initWithFrame:CGRectMake(20, 25, 35, 30)];
+        
+    }else if([[UIScreen mainScreen] bounds].size.height==568){ //iPhone5,5s,iPod Touch第5世代
+        backButton = [[UIButton alloc] initWithFrame:CGRectMake(16, 52, 35, 30)];
+        
+    }else if([[UIScreen mainScreen] bounds].size.height==1024){ //iPad
+        backButton = [[UIButton alloc] initWithFrame:CGRectMake(16, 52, 35, 30)];
+        
+    }
+    
+    
     
     [backButton setBackgroundImage:backButtonImage forState:UIControlStateNormal];  // 画像をセットする
     
@@ -484,8 +532,21 @@
     
     /* --- Twitter --- */
     UIImage *twButtonImage = [UIImage imageNamed:@"Twitter.png"];
-    twitterButton = [[UIButton alloc] initWithFrame:CGRectMake(130, 469, 60, 60)];
     
+    
+    if([[UIScreen mainScreen] bounds].size.height==480){ //iPhone4,4s,iPod Touch第4世代
+        twitterButton = [[UIButton alloc] initWithFrame:CGRectMake(130, 412, 50, 50)];
+        
+    }else if([[UIScreen mainScreen] bounds].size.height==568){ //iPhone5,5s,iPod Touch第5世代
+        twitterButton = [[UIButton alloc] initWithFrame:CGRectMake(130, 469, 60, 60)];
+        
+    }else if([[UIScreen mainScreen] bounds].size.height==1024){ //iPad
+        twitterButton = [[UIButton alloc] initWithFrame:CGRectMake(130, 469, 60, 60)];
+        
+    }
+    
+
+   
     [twitterButton setBackgroundImage:twButtonImage forState:UIControlStateNormal];  // 画像をセットする
     [twitterButton addTarget:self action:@selector(twitterButton:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:twitterButton];
@@ -494,7 +555,21 @@
     
     /* --- Facebook --- */
     UIImage *fbButtonImage = [UIImage imageNamed:@"Facebook.png"];
-    facebookButton = [[UIButton alloc] initWithFrame:CGRectMake(38, 469, 60, 60)];
+    
+    
+    if([[UIScreen mainScreen] bounds].size.height==480){ //iPhone4,4s,iPod Touch第4世代
+        facebookButton = [[UIButton alloc] initWithFrame:CGRectMake(38, 412, 50, 50)];
+
+        
+    }else if([[UIScreen mainScreen] bounds].size.height==568){ //iPhone5,5s,iPod Touch第5世代
+        facebookButton = [[UIButton alloc] initWithFrame:CGRectMake(38, 469, 60, 60)];
+        
+    }else if([[UIScreen mainScreen] bounds].size.height==1024){ //iPad
+        facebookButton = [[UIButton alloc] initWithFrame:CGRectMake(38, 469, 60, 60)];
+
+    }
+
+    
     
     [facebookButton setBackgroundImage:fbButtonImage forState:UIControlStateNormal];  // 画像をセットする
     
@@ -504,8 +579,19 @@
     
     /* --- LINE --- */
     UIImage *lnButtonImage = [UIImage imageNamed:@"LINE.png"];
-    lineButton = [[UIButton alloc] initWithFrame:CGRectMake(220, 469, 60, 60)];
     
+    if([[UIScreen mainScreen] bounds].size.height==480){ //iPhone4,4s,iPod Touch第4世代
+        lineButton = [[UIButton alloc] initWithFrame:CGRectMake(220, 412, 50, 50)];
+
+    }else if([[UIScreen mainScreen] bounds].size.height==568){ //iPhone5,5s,iPod Touch第5世代
+         lineButton = [[UIButton alloc] initWithFrame:CGRectMake(220, 469, 60, 60)];
+        
+    }else if([[UIScreen mainScreen] bounds].size.height==1024){ //iPad
+         lineButton = [[UIButton alloc] initWithFrame:CGRectMake(220, 469, 60, 60)];
+    }
+    
+    
+        
     [lineButton setBackgroundImage:lnButtonImage forState:UIControlStateNormal];  // 画像をセットする
     
     [lineButton addTarget:self action:@selector(lineButton:) forControlEvents:UIControlEventTouchUpInside];
