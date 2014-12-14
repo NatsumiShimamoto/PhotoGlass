@@ -56,6 +56,10 @@
 		DD1A03BF1A33212300C89E1A /* splash1136_640.png in Resources */ = {isa = PBXBuildFile; fileRef = DD1A03BD1A33212300C89E1A /* splash1136_640.png */; };
 		DD6227DB19FCD65600DD15BE /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = DD6227D819FCD65600DD15BE /* SVProgressHUD.bundle */; };
 		DD6227DC19FCD65600DD15BE /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = DD6227DA19FCD65600DD15BE /* SVProgressHUD.m */; };
+		DDD9D1BB1A3D21CB00E59BD0 /* Storyboard_3.5inch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDD9D1BA1A3D21CB00E59BD0 /* Storyboard_3.5inch.storyboard */; };
+		DDD9D1BD1A3D220500E59BD0 /* Storyboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDD9D1BC1A3D220500E59BD0 /* Storyboard_iPad.storyboard */; };
+		DDF559D01A3D46C900D6412D /* sandglass_4.png in Resources */ = {isa = PBXBuildFile; fileRef = DDF559CE1A3D46C900D6412D /* sandglass_4.png */; };
+		DDF559D11A3D46C900D6412D /* sandglass_iPad.png in Resources */ = {isa = PBXBuildFile; fileRef = DDF559CF1A3D46C900D6412D /* sandglass_iPad.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -139,6 +143,10 @@
 		DD6227D819FCD65600DD15BE /* SVProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SVProgressHUD.bundle; sourceTree = "<group>"; };
 		DD6227D919FCD65600DD15BE /* SVProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVProgressHUD.h; sourceTree = "<group>"; };
 		DD6227DA19FCD65600DD15BE /* SVProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVProgressHUD.m; sourceTree = "<group>"; };
+		DDD9D1BA1A3D21CB00E59BD0 /* Storyboard_3.5inch.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard_3.5inch.storyboard; sourceTree = "<group>"; };
+		DDD9D1BC1A3D220500E59BD0 /* Storyboard_iPad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard_iPad.storyboard; sourceTree = "<group>"; };
+		DDF559CE1A3D46C900D6412D /* sandglass_4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sandglass_4.png; sourceTree = "<group>"; };
+		DDF559CF1A3D46C900D6412D /* sandglass_iPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sandglass_iPad.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -246,6 +254,8 @@
 				1BB1F88319B617E400CDF45F /* UIImage+GIF.h */,
 				1BB1F88419B617E400CDF45F /* UIImage+GIF.m */,
 				1BB1F85419B6170300CDF45F /* Main.storyboard */,
+				DDD9D1BA1A3D21CB00E59BD0 /* Storyboard_3.5inch.storyboard */,
+				DDD9D1BC1A3D220500E59BD0 /* Storyboard_iPad.storyboard */,
 				1BB1F87719B6178700CDF45F /* sandGlassViewController.h */,
 				1BB1F87819B6178700CDF45F /* sandGlassViewController.m */,
 				1BB1F87A19B6179F00CDF45F /* mosaicViewController.h */,
@@ -292,6 +302,8 @@
 				DD1A03B41A331C4600C89E1A /* icons */,
 				DD1A03B51A331C5F00C89E1A /* splash */,
 				1BB708BB19D59FF200B876CF /* sandglass.png */,
+				DDF559CE1A3D46C900D6412D /* sandglass_4.png */,
+				DDF559CF1A3D46C900D6412D /* sandglass_iPad.png */,
 				1B8E02A019CF1D3500584489 /* sanset.png */,
 				1B7E763219D57F5200966A20 /* 砂時計なし背景.png */,
 				1BB708BD19D5A24600B876CF /* yazirushi.png */,
@@ -432,11 +444,15 @@
 				1BC3C47119C07BB5004D58C7 /* Facebook.png in Resources */,
 				1BC3C47519C07C7B004D58C7 /* Default-568h@2x.png in Resources */,
 				1BB1F85619B6170300CDF45F /* Main.storyboard in Resources */,
+				DDF559D11A3D46C900D6412D /* sandglass_iPad.png in Resources */,
 				1BB0A05D19D2E05300491D6F /* icon120.png in Resources */,
 				1BB0A05C19D2E05300491D6F /* icon80.png in Resources */,
 				DD1A03BF1A33212300C89E1A /* splash1136_640.png in Resources */,
 				DD1A03B31A331BF200C89E1A /* shakeView.png in Resources */,
+				DDF559D01A3D46C900D6412D /* sandglass_4.png in Resources */,
 				1B8E02A219CF1D3500584489 /* sanset.png in Resources */,
+				DDD9D1BD1A3D220500E59BD0 /* Storyboard_iPad.storyboard in Resources */,
+				DDD9D1BB1A3D21CB00E59BD0 /* Storyboard_3.5inch.storyboard in Resources */,
 				1BB708BC19D59FF200B876CF /* sandglass.png in Resources */,
 				1BC3C47319C07BB5004D58C7 /* Twitter.png in Resources */,
 				1BB708C019D5AB1400B876CF /* 砂.gif in Resources */,

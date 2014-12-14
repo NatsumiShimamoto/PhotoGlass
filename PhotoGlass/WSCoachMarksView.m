@@ -42,7 +42,7 @@ static const BOOL kEnableContinueLabel = YES;
     if (self) {
         // Save the coach marks
         self.coachMarks = marks;
-
+        
         // Setup
         [self setup];
     }
@@ -75,20 +75,20 @@ static const BOOL kEnableContinueLabel = YES;
     self.lblSpacing = kLblSpacing;
     self.enableContinueLabel = kEnableContinueLabel;
     
-
+    
     // Shape layer mask
     mask = [CAShapeLayer layer];
     [mask setFillRule:kCAFillRuleEvenOdd];
     [mask setFillColor:[[UIColor colorWithHue:0.0f saturation:0.0f brightness:0.0f alpha:0.9f] CGColor]];
     [self.layer addSublayer:mask];
-
+    
     // Capture touches
     UITapGestureRecognizer *tapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(userDidTap:)];
     [self addGestureRecognizer:tapGestureRecognizer];
-
     
-   
-
+    
+    
+    
     
     
     // Captions
@@ -101,7 +101,7 @@ static const BOOL kEnableContinueLabel = YES;
     self.lblCaption.textAlignment = NSTextAlignmentCenter;
     self.lblCaption.alpha = 0.0f;
     [self addSubview:self.lblCaption];
-
+    
     // Hide until unvoked
     self.hidden = YES;
 }
@@ -124,7 +124,7 @@ static const BOOL kEnableContinueLabel = YES;
     UIBezierPath *maskPath = [UIBezierPath bezierPathWithRect:self.bounds];
     UIBezierPath *cutoutPath = [UIBezierPath bezierPathWithRoundedRect:rect cornerRadius:self.cutoutRadius];
     [maskPath appendPath:cutoutPath];
-
+    
     // Animate it
     CABasicAnimation *anim = [CABasicAnimation animationWithKeyPath:@"path"];
     anim.delegate = self;
@@ -179,37 +179,75 @@ static const BOOL kEnableContinueLabel = YES;
         [self cleanup];
         return;
     }
-
-   
+    
+    
     // Current index
     markIndex = index;
-
+    
     // Coach mark definition
     NSDictionary *markDef = [self.coachMarks objectAtIndex:index];
     NSString *markCaption = [markDef objectForKey:@"caption"];
     CGRect markRect = [[markDef objectForKey:@"rect"] CGRectValue];
-
+    
     // Delegate (coachMarksView:willNavigateTo:atIndex:)
     if ([self.delegate respondsToSelector:@selector(coachMarksView:willNavigateToIndex:)]) {
         [self.delegate coachMarksView:self willNavigateToIndex:markIndex];
     }
-
     
-    //CGRect{{x,y},{width,height}}
-    if(markIndex == 0){
-        self.lblCaption.frame = (CGRect){{50, 100}, {200, 70}};
+    
+    
+     //CGRect{{x,y},{width,height}}
+    
+    if([[UIScreen mainScreen] bounds].size.height==480){ //iPhone4,4s,iPod Touch第4世代
+        if(markIndex == 0){
+            self.lblCaption.frame = (CGRect){{50, 100}, {220, 70}};
+        }
+        else if(markIndex  == 1){
+            self.lblCaption.frame = (CGRect){{50, 120}, {200, 70}};
+        }
+        else if(markIndex  == 2){
+            self.lblCaption.frame = (CGRect){{50, 200}, {240, 70}};
+        }
+        else if(markIndex  == 3){
+            self.lblCaption.frame = (CGRect){{50, 100}, {220, 70}};
+        }
+        
+    }else if([[UIScreen mainScreen] bounds].size.height==568){ //iPhone5,5s,iPod Touch第5世代
+        if(markIndex == 0){
+            self.lblCaption.frame = (CGRect){{50, 100}, {200, 70}};
+        }
+        else if(markIndex  == 1){
+            self.lblCaption.frame = (CGRect){{50, 170}, {200, 90}};
+        }
+        else if(markIndex  == 2){
+            self.lblCaption.frame = (CGRect){{50, 200}, {200, 90}};
+        }
+        else if(markIndex  == 3){
+            self.lblCaption.frame = (CGRect){{50, 200}, {200, 90}};
+        }
+        
+        
+        
+    }else if([[UIScreen mainScreen] bounds].size.height==1024){ //iPad
+        if(markIndex == 0){
+            self.lblCaption.frame = (CGRect){{50, 100}, {200, 70}};
+        }
+        else if(markIndex  == 1){
+            self.lblCaption.frame = (CGRect){{50, 170}, {200, 90}};
+        }
+        else if(markIndex  == 2){
+            self.lblCaption.frame = (CGRect){{50, 200}, {200, 90}};
+        }
+        else if(markIndex  == 3){
+            self.lblCaption.frame = (CGRect){{50, 200}, {200, 90}};
+        }
+        
     }
-    else if(markIndex  == 1){
-        self.lblCaption.frame = (CGRect){{50, 170}, {200, 90}};
-    }
-    else if(markIndex  == 2){
-        self.lblCaption.frame = (CGRect){{50, 200}, {200, 90}};
-    }
-    else if(markIndex  == 3){
-        self.lblCaption.frame = (CGRect){{50, 200}, {200, 90}};
-    }
-
-
+    
+    
+   
+    
+    
     
     // Calculate the caption position and size
     self.lblCaption.alpha = 0.0f;
@@ -219,26 +257,26 @@ static const BOOL kEnableContinueLabel = YES;
     //CGFloat y = markRect.origin.y + markRect.size.height + self.lblSpacing;
     //CGFloat bottomY = y + self.lblCaption.frame.size.height + self.lblSpacing;
     //if (bottomY > self.bounds.size.height) {
-   //     y = markRect.origin.y - self.lblSpacing - self.lblCaption.frame.size.height;
+    //     y = markRect.origin.y - self.lblSpacing - self.lblCaption.frame.size.height;
     //}
     //CGFloat x = floorf((self.bounds.size.width - self.lblCaption.frame.size.width) / 2.0f);
-
+    
     // Animate the caption label
-   // self.lblCaption.frame = (CGRect){{x, y}, self.lblCaption.frame.size};
+    // self.lblCaption.frame = (CGRect){{x, y}, self.lblCaption.frame.size};
     [UIView animateWithDuration:0.3f animations:^{
         self.lblCaption.alpha = 1.0f;
     }];
-
+    
     // If first mark, set the cutout to the center of first mark
     if (markIndex == 0) {
         CGPoint center = CGPointMake(floorf(markRect.origin.x + (markRect.size.width / 2.0f)), floorf(markRect.origin.y + (markRect.size.height / 2.0f)));
         CGRect centerZero = (CGRect){center, CGSizeZero};
         [self setCutoutToRect:centerZero];
     }
-
+    
     // Animate the cutout
     [self animateCutoutToRect:markRect];
-
+    
 }
 #pragma mark - Cleanup
 
@@ -247,7 +285,7 @@ static const BOOL kEnableContinueLabel = YES;
     if ([self.delegate respondsToSelector:@selector(coachMarksViewWillCleanup:)]) {
         [self.delegate coachMarksViewWillCleanup:self];
     }
-
+    
     // Fade out self
     [UIView animateWithDuration:self.animationDuration
                      animations:^{
@@ -256,7 +294,7 @@ static const BOOL kEnableContinueLabel = YES;
                      completion:^(BOOL finished) {
                          // Remove self
                          [self removeFromSuperview];
-
+                         
                          // Delegate (coachMarksViewDidCleanup:)
                          if ([self.delegate respondsToSelector:@selector(coachMarksViewDidCleanup:)]) {
                              [self.delegate coachMarksViewDidCleanup:self];

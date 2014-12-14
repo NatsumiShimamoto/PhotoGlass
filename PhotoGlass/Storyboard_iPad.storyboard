@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="13F34" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="l2F-mw-A4X">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+    </dependencies>
+    <scenes>
+        <!--Sand Glass View Controller-->
+        <scene sceneID="jtz-5n-g1t">
+            <objects>
+                <viewController id="l2F-mw-A4X" customClass="sandGlassViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gAK-HJ-um7"/>
+                        <viewControllerLayoutGuide type="bottom" id="Iic-0z-Ine"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="6zR-Wl-yPT">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iiZ-x8-0oH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="511" y="574"/>
+        </scene>
+        <!--Mosaic View Controller-->
+        <scene sceneID="CHS-fh-gJV">
+            <objects>
+                <viewController id="cfV-Ao-v9O" customClass="mosaicViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Gun-7u-F2v"/>
+                        <viewControllerLayoutGuide type="bottom" id="Xt8-7O-bnD"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="6yn-xx-7pB">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="砂時計なし背景.png" translatesAutoresizingMaskIntoConstraints="NO" id="zAu-8A-1lk">
+                                <rect key="frame" x="-56" y="-198" width="857" height="1263"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uo8-kV-gTy">
+                                <rect key="frame" x="-2" y="114" width="772" height="772"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="imgView" destination="uo8-kV-gTy" id="D6H-A1-sgl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CNq-L9-zSe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1343" y="574"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="砂時計なし背景.png" width="640" height="1136"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination"/>
+    </simulatedMetricsContainer>
+</document>

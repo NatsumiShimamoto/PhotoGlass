@@ -49,10 +49,30 @@
     [super viewDidLoad];
     [self makeImgParts];
     
-    /* ---　背景画像設定 --- */
-    back = [UIImage imageNamed:@"sandglass.png"];
-    backView = [[UIImageView alloc] initWithImage:back];
-    backView.frame = CGRectMake(0, 0, 320, 568);
+    if([[UIScreen mainScreen] bounds].size.height==480){ //iPhone4,4s,iPod Touch第4世代
+        back = [UIImage imageNamed:@"sandglass_4.png"];
+        backView = [[UIImageView alloc] initWithImage:back];
+        backView.frame = CGRectMake(0, 0, 320, 480);
+        
+    }else if([[UIScreen mainScreen] bounds].size.height==568){ //iPhone5,5s,iPod Touch第5世代
+        back = [UIImage imageNamed:@"sandglass.png"];
+        backView = [[UIImageView alloc] initWithImage:back];
+        backView.frame = CGRectMake(0, 0, 320, 568);
+        
+    }else if([[UIScreen mainScreen] bounds].size.height==1024){ //iPad
+        back = [UIImage imageNamed:@"sandglass_iPad.png"];
+        backView = [[UIImageView alloc] initWithImage:back];
+        backView.frame = CGRectMake(0, 0, 384, 512);
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     //gifアニメーション
     UIImage *sunaImage = [UIImage animatedGIFNamed:@"砂"];
@@ -111,22 +131,45 @@
     if (coachMarksShown == NO) {
         
         
-    // コーチマーク毎にカットアウトの位置（CGRect）とキャプション（NSString）のディクショナリ
-    //(CGRect){x,y},{width,height}}
-    coachMarks = @[
-                   @{@"rect":[NSValue valueWithCGRect:(CGRect){{0,0},{0,0}}], @"caption": @"はじめまして。あなたの青春がもっと輝くようなお手伝いをします。"},
-                   @{@"rect": [NSValue valueWithCGRect:(CGRect){{35.0f,10.0f},{250.0f,550.0f}}], @"caption": @"この砂時計が、これからあなたのパートナーです。あなたが大切にしたい時間砂が落ち続けます。"},
-                   @{@"rect": [NSValue valueWithCGRect:(CGRect){{40.0f,378.0f},{246.0f,180.0f}}], @"caption": @"これから撮った写真は、ここに溜まっていきます。"},
-                   @{@"rect": [NSValue valueWithCGRect:(CGRect){{0,0},{0,0}}], @"caption": @"楽しかったあの瞬間に戻りたい、と思った時はiPhoneをひっくり返してみてください。(iPhoneの縦向きロックをOFFにしてください)"}
-                   ];
-    
-    // WSCoachMarksViewオブジェクトの作成
-    
-    coachMarksView = [[WSCoachMarksView alloc] initWithFrame:self.view.bounds coachMarks:coachMarks];
-    // 親ビューに追加
-    [self.view addSubview:coachMarksView];
-    // コーチマークを表示する
-    [coachMarksView start];
+        // コーチマーク毎にカットアウトの位置（CGRect）とキャプション（NSString）のディクショナリ
+        //(CGRect){x,y},{width,height}}
+        
+        if([[UIScreen mainScreen] bounds].size.height==480){ //iPhone4,4s,iPod Touch第4世代
+            coachMarks = @[
+                           @{@"rect":[NSValue valueWithCGRect:(CGRect){{0,0},{0,0}}], @"caption": @"はじめまして。あなたの青春がもっと輝くようなお手伝いをします。"},
+                           @{@"rect": [NSValue valueWithCGRect:(CGRect){{35.0f,10.0f},{250.0f,460.0f}}], @"caption": @"この砂時計が、これからあなたのパートナーです。あなたが大切にしたい時間砂が落ち続けます。"},
+                           @{@"rect": [NSValue valueWithCGRect:(CGRect){{40.0f,370.0f},{246.0f,100.0f}}], @"caption": @"これから撮った写真は、ここに溜まっていきます。"},
+                           @{@"rect": [NSValue valueWithCGRect:(CGRect){{0,0},{0,0}}], @"caption": @"楽しかったあの瞬間に5りたい、と思った時はiPhoneをひっくり返してみてください。(iPhoneの縦向きロックをOFFにしてください)"}
+                           ];
+            
+        }else if([[UIScreen mainScreen] bounds].size.height==568){ //iPhone5,5s,iPod
+            coachMarks = @[
+                           @{@"rect":[NSValue valueWithCGRect:(CGRect){{0,0},{0,0}}], @"caption": @"はじめまして。あなたの青春がもっと輝くようなお手伝いをします。"},
+                           @{@"rect": [NSValue valueWithCGRect:(CGRect){{35.0f,10.0f},{250.0f,550.0f}}], @"caption": @"この砂時計が、これからあなたのパートナーです。あなたが大切にしたい時間砂が落ち続けます。"},
+                           @{@"rect": [NSValue valueWithCGRect:(CGRect){{40.0f,378.0f},{246.0f,180.0f}}], @"caption": @"これから撮った写真は、ここに溜まっていきます。"},
+                           @{@"rect": [NSValue valueWithCGRect:(CGRect){{0,0},{0,0}}], @"caption": @"楽しかったあの瞬間に戻りたい、と思った時はiPhoneをひっくり返してみてください。(iPhoneの縦向きロックをOFFにしてください)"}
+                           ];
+            
+        }else if([[UIScreen mainScreen] bounds].size.height==1024){ //iPad
+            coachMarks = @[
+                           @{@"rect":[NSValue valueWithCGRect:(CGRect){{0,0},{0,0}}], @"caption": @"はじめまして。あなたの青春がもっと輝くようなお手伝いをします。"},
+                           @{@"rect": [NSValue valueWithCGRect:(CGRect){{35.0f,15.0f},{250.0f,550.0f}}], @"caption": @"この砂時計が、これからあなたのパートナーです。あなたが大切にしたい時間砂が落ち続けます。"},
+                           @{@"rect": [NSValue valueWithCGRect:(CGRect){{40.0f,378.0f},{246.0f,180.0f}}], @"caption": @"これから撮った写真は、ここに溜まっていきます。"},
+                           @{@"rect": [NSValue valueWithCGRect:(CGRect){{0,0},{0,0}}], @"caption": @"楽しかったあの瞬間に戻りたい、と思った時はiPhoneをひっくり返してみてください。(iPhoneの縦向きロックをOFFにしてください)"}
+                           ];
+        }
+        
+        
+        
+        
+        
+        // WSCoachMarksViewオブジェクトの作成
+        
+        coachMarksView = [[WSCoachMarksView alloc] initWithFrame:self.view.bounds coachMarks:coachMarks];
+        // 親ビューに追加
+        [self.view addSubview:coachMarksView];
+        // コーチマークを表示する
+        [coachMarksView start];
     }
     
 }
