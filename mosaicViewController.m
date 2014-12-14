@@ -149,7 +149,7 @@
         shakeImageView.frame = shakeRect;
         
     }else if([[UIScreen mainScreen] bounds].size.height==1024){ //iPad
-        CGRect shakeRect = CGRectMake(40, 465, 240, 71);
+        CGRect shakeRect = CGRectMake(270, 910, 260, 90);
         shakeImageView.frame = shakeRect;
     }
     
@@ -541,7 +541,7 @@
         twitterButton = [[UIButton alloc] initWithFrame:CGRectMake(130, 469, 60, 60)];
         
     }else if([[UIScreen mainScreen] bounds].size.height==1024){ //iPad
-        twitterButton = [[UIButton alloc] initWithFrame:CGRectMake(130, 469, 60, 60)];
+        twitterButton = [[UIButton alloc] initWithFrame:CGRectMake(344, 914, 80, 80)];
         
     }
     
@@ -564,11 +564,9 @@
         facebookButton = [[UIButton alloc] initWithFrame:CGRectMake(38, 469, 60, 60)];
         
     }else if([[UIScreen mainScreen] bounds].size.height==1024){ //iPad
-        facebookButton = [[UIButton alloc] initWithFrame:CGRectMake(38, 469, 60, 60)];
+        facebookButton = [[UIButton alloc] initWithFrame:CGRectMake(138, 914, 80, 80)];
 
     }
-
-    
     
     [facebookButton setBackgroundImage:fbButtonImage forState:UIControlStateNormal];  // 画像をセットする
     
@@ -586,9 +584,8 @@
          lineButton = [[UIButton alloc] initWithFrame:CGRectMake(220, 469, 60, 60)];
         
     }else if([[UIScreen mainScreen] bounds].size.height==1024){ //iPad
-         lineButton = [[UIButton alloc] initWithFrame:CGRectMake(220, 469, 60, 60)];
+         lineButton = [[UIButton alloc] initWithFrame:CGRectMake(550, 914, 80, 80)];
     }
-    
     
         
     [lineButton setBackgroundImage:lnButtonImage forState:UIControlStateNormal];  // 画像をセットする

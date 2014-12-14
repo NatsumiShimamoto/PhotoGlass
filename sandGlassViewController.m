@@ -62,7 +62,7 @@
     }else if([[UIScreen mainScreen] bounds].size.height==1024){ //iPad
         back = [UIImage imageNamed:@"sandglass_iPad.png"];
         backView = [[UIImageView alloc] initWithImage:back];
-        backView.frame = CGRectMake(0, 0, 384, 512);
+        backView.frame = CGRectMake(0, 0, 768, 1024);
     }
     
     
