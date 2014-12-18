@@ -221,7 +221,8 @@
 
 //モザイクアートを作成する
 -(void)makeMosaic{
-    imgView.image = [Image resize:imgView.image rect:CGRectMake(0,0,40,40)];
+    imgView.image = [Image resize:imgView.image rect:CGRectMake(0,0,70,70)];
+    //imgView.image = [Image resize:imgView.image rect:CGRectMake(0,0,40,40)];
     
     //モザイクアートの元画像の各ピクセルの色情報をpixelArrに格納する
     [self pixelRGB:imgView.image];
@@ -372,7 +373,16 @@
 -(void)makeMozaiku{
     int imageWidth = imgView.image.size.width;//元画像の横のピクセル値
     int imageHeight = imgView.image.size.height;//元画像の縦のピクセル値
-    int pixelSize = 320/imgView.image.size.width;//ピクセルの大きさ
+    int pixelSize;
+    
+    if([[UIScreen mainScreen] bounds].size.height==480 || [[UIScreen mainScreen] bounds].size.height==568){ //iPhone4,4s,iPod Touch第4世代
+        pixelSize = 320/imgView.image.size.width;//ピクセルの大きさ
+
+    }else if([[UIScreen mainScreen] bounds].size.height==1024){ //iPad
+        pixelSize = 772/imgView.image.size.width;//ピクセルの大きさ
+    }
+
+    
     //各ピクセルを類似したカメラロールの画像に置き換える
     for (int i=0; i<imageWidth*imageHeight; i++) {
         

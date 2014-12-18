@@ -819,7 +819,7 @@
                                           NSLog(@"i %d",i);
                                           
                                           x = 148 +400 *(i/2 + i%2)*n;
-                                          y = 700;
+                                          y = 70;
                                           NSLog(@"y %d",y);
                                           
                                           picImgView = [[UIImageView alloc] initWithFrame:CGRectMake(x, y, 40, 40)];

@@ -40,7 +40,7 @@
                                 <rect key="frame" x="-56" y="-198" width="857" height="1263"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uo8-kV-gTy">
-                                <rect key="frame" x="-2" y="114" width="772" height="772"/>
+                                <rect key="frame" x="-2" y="110" width="772" height="772"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
