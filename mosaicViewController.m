@@ -221,8 +221,18 @@
 
 //モザイクアートを作成する
 -(void)makeMosaic{
-    imgView.image = [Image resize:imgView.image rect:CGRectMake(0,0,70,70)];
-    //imgView.image = [Image resize:imgView.image rect:CGRectMake(0,0,40,40)];
+    
+    
+    if([[UIScreen mainScreen] bounds].size.height==480||[[UIScreen mainScreen] bounds].size.height==568){
+        
+        imgView.image = [Image resize:imgView.image rect:CGRectMake(0,0,40,40)];
+        //全部で8×8 = 64 枚
+    }else if([[UIScreen mainScreen] bounds].size.height==1024){ //iPad
+        
+        imgView.image = [Image resize:imgView.image rect:CGRectMake(0,0,70,70)];
+        //全部で11×11 = 121枚
+    }
+
     
     //モザイクアートの元画像の各ピクセルの色情報をpixelArrに格納する
     [self pixelRGB:imgView.image];
@@ -259,13 +269,13 @@
                                                                                rect:CGRectMake(0, 0, 10, 10)];
                                                [cameraArr addObject:[self checkColor:sampleImage]];
                                                
-
+                                               
                                            }else{
                                                //画像の格納が終了した時に呼ばれる
                                                //モザイクアートを作成する
                                                [self makeMozaiku];
                                                
-                                                                                         }
+                                           }
                                            
                                        };
                                        
@@ -373,15 +383,15 @@
 -(void)makeMozaiku{
     int imageWidth = imgView.image.size.width;//元画像の横のピクセル値
     int imageHeight = imgView.image.size.height;//元画像の縦のピクセル値
-    int pixelSize;
+    int pixelSize = 0;
     
     if([[UIScreen mainScreen] bounds].size.height==480 || [[UIScreen mainScreen] bounds].size.height==568){ //iPhone4,4s,iPod Touch第4世代
         pixelSize = 320/imgView.image.size.width;//ピクセルの大きさ
-
+        
     }else if([[UIScreen mainScreen] bounds].size.height==1024){ //iPad
         pixelSize = 772/imgView.image.size.width;//ピクセルの大きさ
     }
-
+    
     
     //各ピクセルを類似したカメラロールの画像に置き換える
     for (int i=0; i<imageWidth*imageHeight; i++) {
@@ -428,7 +438,7 @@
                 // 後々取り除くために保存
                 [imageViewList addObject:imageView];
                 
-               
+                
             }
         }
         
@@ -508,10 +518,6 @@
     
     [SVProgressHUD showWithStatus:@"作成中..." maskType:SVProgressHUDMaskTypeGradient];
     
-    
-    
-    
-    
     //[self makeMosaic];
     
     
@@ -559,7 +565,6 @@
     [twitterButton addTarget:self action:@selector(twitterButton:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:twitterButton];
     
-    NSLog(@"tuitta");
     
     
     /* --- Facebook --- */
@@ -568,14 +573,14 @@
     
     if([[UIScreen mainScreen] bounds].size.height==480){ //iPhone4,4s,iPod Touch第4世代
         facebookButton = [[UIButton alloc] initWithFrame:CGRectMake(38, 415, 50, 50)];
-
+        
         
     }else if([[UIScreen mainScreen] bounds].size.height==568){ //iPhone5,5s,iPod Touch第5世代
         facebookButton = [[UIButton alloc] initWithFrame:CGRectMake(38, 469, 60, 60)];
         
     }else if([[UIScreen mainScreen] bounds].size.height==1024){ //iPad
         facebookButton = [[UIButton alloc] initWithFrame:CGRectMake(138, 914, 80, 80)];
-
+        
     }
     
     [facebookButton setBackgroundImage:fbButtonImage forState:UIControlStateNormal];  // 画像をセットする
@@ -589,15 +594,15 @@
     
     if([[UIScreen mainScreen] bounds].size.height==480){ //iPhone4,4s,iPod Touch第4世代
         lineButton = [[UIButton alloc] initWithFrame:CGRectMake(220, 415, 50, 50)];
-
+        
     }else if([[UIScreen mainScreen] bounds].size.height==568){ //iPhone5,5s,iPod Touch第5世代
-         lineButton = [[UIButton alloc] initWithFrame:CGRectMake(220, 469, 60, 60)];
+        lineButton = [[UIButton alloc] initWithFrame:CGRectMake(220, 469, 60, 60)];
         
     }else if([[UIScreen mainScreen] bounds].size.height==1024){ //iPad
-         lineButton = [[UIButton alloc] initWithFrame:CGRectMake(550, 914, 80, 80)];
+        lineButton = [[UIButton alloc] initWithFrame:CGRectMake(550, 914, 80, 80)];
     }
     
-        
+    
     [lineButton setBackgroundImage:lnButtonImage forState:UIControlStateNormal];  // 画像をセットする
     
     [lineButton addTarget:self action:@selector(lineButton:) forControlEvents:UIControlEventTouchUpInside];
