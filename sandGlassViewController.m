@@ -573,7 +573,7 @@
                                   /* --- iPad --- */
                                   
                                   if(i==0){ //１段目真ん中
-                                      picImgView = [[UIImageView alloc] initWithFrame:CGRectMake(148, 513, 24, 24)];
+                                      picImgView = [[UIImageView alloc] initWithFrame:CGRectMake(374, 900, 40, 40)];
                                       
                                       NSLog(@"i %d",i);
                                   }
@@ -586,13 +586,13 @@
                                           NSLog(@"p %d",p);
                                           NSLog(@"i %d",i);
                                           NSLog(@"おーい");
-                                          x = 148 +24 *(i/2 + i%2)*n;
-                                          y = 516+(i-1)/2*6;
+                                          x = 374 +40 *(i/2 + i%2)*n;
+                                          y = 900+(i-1)/2*6;
                                           NSLog(@"x is %d",x);
                                           //[array addObject:[NSNumber numberWithInteger:x]];
                                           
                                           
-                                          picImgView = [[UIImageView alloc] initWithFrame:CGRectMake(x, y, 24, 24)];
+                                          picImgView = [[UIImageView alloc] initWithFrame:CGRectMake(x, y, 40, 40)];
                                       }
                                   }
                                   
@@ -603,13 +603,13 @@
                                           NSLog(@"p %d",p);
                                           NSLog(@"i %d",i);
                                           NSLog(@"おーい");
-                                          x = 148 +23 *(i/2 + i%2)*n;
-                                          y = 480+(i-1)/2*6;
+                                          x = 374 +40 *(i/2 + i%2)*n;
+                                          y = 860+(i-1)/2*6;
                                           NSLog(@"x is %d",x);
                                           //[array addObject:[NSNumber numberWithInteger:x]];
                                           
                                           
-                                          picImgView = [[UIImageView alloc] initWithFrame:CGRectMake(x, y, 24, 24)];
+                                          picImgView = [[UIImageView alloc] initWithFrame:CGRectMake(x, y, 40, 40)];
                                       }
                                   }
                                   
@@ -623,18 +623,18 @@
                                           NSLog(@"p %d",p);
                                           NSLog(@"i %d",i);
                                           
-                                          x = 136 +24 *(i/2 + i%2)*n;
-                                          y = 489-i/2*5;
+                                          x = 354 +40 *(i/2 + i%2)*n;
+                                          y = 860-i/2*5;
                                           NSLog(@"y %d",y);
                                           
-                                          picImgView = [[UIImageView alloc] initWithFrame:CGRectMake(x, y, 24, 24)];
+                                          picImgView = [[UIImageView alloc] initWithFrame:CGRectMake(x, y, 40, 40)];
                                       }
                                   }
                                   
                                   
                                   
                                   else if(i==11){ //３段目真ん中
-                                      picImgView = [[UIImageView alloc] initWithFrame:CGRectMake(148, 468, 24, 24)];
+                                      picImgView = [[UIImageView alloc] initWithFrame:CGRectMake(374, 826, 40, 40)];
                                       
                                       NSLog(@"i %d",i);
                                   }
@@ -649,11 +649,11 @@
                                           NSLog(@"p %d",p);
                                           NSLog(@"i %d",i);
                                           
-                                          x = 148 +19 *(i/2 + i%2)*n;
-                                          y = 471;
+                                          x = 374 +33 *(i/2 + i%2)*n;
+                                          y = 837;
                                           NSLog(@"y %d",y);
                                           
-                                          picImgView = [[UIImageView alloc] initWithFrame:CGRectMake(x, y, 24, 24)];
+                                          picImgView = [[UIImageView alloc] initWithFrame:CGRectMake(x, y, 40, 40)];
                                       }
                                   }
                                   
@@ -662,10 +662,10 @@
                                       {
                                           NSLog(@"i %d",i);
                                           
-                                          x = 148 +23 *(i/2 + i%2)*n;
-                                          y = 463;
+                                          x = 374 +40 *(i/2 + i%2)*n;
+                                          y = 815;
                                           
-                                          picImgView = [[UIImageView alloc] initWithFrame:CGRectMake(x, y, 24, 24)];
+                                          picImgView = [[UIImageView alloc] initWithFrame:CGRectMake(x, y, 40, 40)];
                                       }
                                   }
                                   
@@ -678,11 +678,11 @@
                                           NSLog(@"p %d",p);
                                           NSLog(@"i %d",i);
                                           
-                                          x = 148 +22 *(i/2 + i%2)*n;
-                                          y = 477;
+                                          x = 374 +36 *(i/2 + i%2)*n;
+                                          y = 840;
                                           NSLog(@"y %d",y);
                                           
-                                          picImgView = [[UIImageView alloc] initWithFrame:CGRectMake(x, y, 24, 24)];
+                                          picImgView = [[UIImageView alloc] initWithFrame:CGRectMake(x, y, 40, 40)];
                                       }
                                   }
                                   
@@ -699,11 +699,11 @@
                                           NSLog(@"p %d",p);
                                           NSLog(@"i %d",i);
                                           
-                                          x = 160 +24 *(i/2 + i%2)*n;
-                                          y = 442;
+                                          x = 394 +40 *(i/2 + i%2)*n;
+                                          y = 780;
                                           NSLog(@"y %d",y);
                                           
-                                          picImgView = [[UIImageView alloc] initWithFrame:CGRectMake(x, y, 24, 24)];
+                                          picImgView = [[UIImageView alloc] initWithFrame:CGRectMake(x, y, 40, 40)];
                                       }
                                   }
                                   
@@ -713,16 +713,16 @@
                                       {
                                           NSLog(@"i %d",i);
                                           
-                                          x = 148 +22 *(i/2 + i%2)*n;
-                                          y = 451;
+                                          x = 374 +40 *(i/2 + i%2)*n;
+                                          y = 800;
                                           //[array addObject:[NSNumber numberWithInteger:x]];
-                                          picImgView = [[UIImageView alloc] initWithFrame:CGRectMake(x, y, 24, 24)];
+                                          picImgView = [[UIImageView alloc] initWithFrame:CGRectMake(x, y, 40, 40)];
                                       }
                                   }
                                   
                                   
                                   else if(i==22){ //５段目真ん中
-                                      picImgView = [[UIImageView alloc] initWithFrame:CGRectMake(148, 421.5, 24, 24)];
+                                      picImgView = [[UIImageView alloc] initWithFrame:CGRectMake(374, 745, 40, 40)];
                                       
                                       NSLog(@"i %d",i);
                                   }
@@ -735,13 +735,14 @@
                                           NSLog(@"p %d",p);
                                           NSLog(@"i %d",i);
                                           
-                                          x = 148 +19 *(i/2 + i%2)*n;
-                                          y = 456;
+                                          x = 374 +31 *(i/2 + i%2)*n;
+                                          y = 803;
                                           NSLog(@"y %d",y);
                                           
-                                          picImgView = [[UIImageView alloc] initWithFrame:CGRectMake(x, y, 24, 24)];
+                                          picImgView = [[UIImageView alloc] initWithFrame:CGRectMake(x, y, 40, 40)];
                                       }
                                   }
+                                  
                                   
                                   else if(24<i && i<=26){ //４段目中２つ
                                       for (i = (int)[group numberOfAssets]-p-24; i <=(int)[group numberOfAssets]-p-24; i++)
@@ -751,11 +752,11 @@
                                           NSLog(@"p %d",p);
                                           NSLog(@"i %d",i);
                                           
-                                          x = 137 +22 *(i/2 + i%2)*n;
-                                          y = 430;
+                                          x = 354 +39 *(i/2 + i%2)*n;
+                                          y = 765;
                                           NSLog(@"y %d",y);
                                           
-                                          picImgView = [[UIImageView alloc] initWithFrame:CGRectMake(x, y, 24, 24)];
+                                          picImgView = [[UIImageView alloc] initWithFrame:CGRectMake(x, y, 40, 40)];
                                       }
                                   }
                                   
@@ -764,10 +765,10 @@
                                       {
                                           NSLog(@"i %d",i);
                                           
-                                          x = 148 +21 *(i/2 + i%2)*n;
-                                          y = 436.5;
+                                          x = 374 +35 *(i/2 + i%2)*n;
+                                          y = 768;
                                           //[array addObject:[NSNumber numberWithInteger:x]];
-                                          picImgView = [[UIImageView alloc] initWithFrame:CGRectMake(x, y, 24, 24)];
+                                          picImgView = [[UIImageView alloc] initWithFrame:CGRectMake(x, y, 40, 40)];
                                       }
                                   }
                                   
@@ -780,11 +781,11 @@
                                           NSLog(@"p %d",p);
                                           NSLog(@"i %d",i);
                                           
-                                          x = 148 +18 *(i/2 + i%2)*n;
-                                          y = 437;
+                                          x = 374 +30 *(i/2 + i%2)*n;
+                                          y = 770;
                                           NSLog(@"y %d",y);
                                           
-                                          picImgView = [[UIImageView alloc] initWithFrame:CGRectMake(x, y, 24, 24)];
+                                          picImgView = [[UIImageView alloc] initWithFrame:CGRectMake(x, y, 40, 40)];
                                       }
                                   }
                                   
@@ -796,15 +797,15 @@
                                       {
                                           NSLog(@"i %d",i);
                                           
-                                          x = 148 +21 *(i/2 + i%2)*n;
-                                          y = 409.5;
+                                          x = 374 +40 *(i/2 + i%2)*n;
+                                          y = 728;
                                           
-                                          picImgView = [[UIImageView alloc] initWithFrame:CGRectMake(x, y, 24, 24)];
+                                          picImgView = [[UIImageView alloc] initWithFrame:CGRectMake(x, y, 40, 40)];
                                       }
                                   }
                                   
                                   else if(i==33){ //てっぺん（６段目）
-                                      picImgView = [[UIImageView alloc] initWithFrame:CGRectMake(148, 398, 24, 24)];
+                                      picImgView = [[UIImageView alloc] initWithFrame:CGRectMake(374, 703, 40, 40)];
                                       
                                       NSLog(@"i %d",i);
                                   }
@@ -817,11 +818,11 @@
                                           NSLog(@"p %d",p);
                                           NSLog(@"i %d",i);
                                           
-                                          x = 148 +26 *(i/2 + i%2)*n;
-                                          y = 415;
+                                          x = 148 +400 *(i/2 + i%2)*n;
+                                          y = 700;
                                           NSLog(@"y %d",y);
                                           
-                                          picImgView = [[UIImageView alloc] initWithFrame:CGRectMake(x, y, 24, 24)];
+                                          picImgView = [[UIImageView alloc] initWithFrame:CGRectMake(x, y, 40, 40)];
                                       }
                                   }
                                   
@@ -831,10 +832,10 @@
                                       {
                                           NSLog(@"i %d",i);
                                           
-                                          x = 148 +19 *(i/2 + i%2)*n;
-                                          y = 416;
+                                          x = 374 +32 *(i/2 + i%2)*n;
+                                          y = 735;
                                           //[array addObject:[NSNumber numberWithInteger:x]];
-                                          picImgView = [[UIImageView alloc] initWithFrame:CGRectMake(x, y, 24, 24)];
+                                          picImgView = [[UIImageView alloc] initWithFrame:CGRectMake(x, y, 40, 40)];
                                       }
                                   }
                                   
@@ -880,7 +881,7 @@
     
     CALayer *layer = picImgView.layer;
     layer.masksToBounds = YES;
-    layer.cornerRadius = 12.0f;
+    layer.cornerRadius = 20.0f;
     
     UIImage *maruue = [UIImage imageNamed:@"sunadokei.png"];
     UIImageView *maruueView = [[UIImageView alloc] initWithImage:maruue];
