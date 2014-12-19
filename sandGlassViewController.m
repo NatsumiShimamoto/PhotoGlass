@@ -148,8 +148,8 @@
             coachMarks = @[
                            @{@"rect":[NSValue valueWithCGRect:(CGRect){{0,0},{0,0}}], @"caption": @"はじめまして。あなたの青春がもっと輝くようなお手伝いをします。"},
                             @{@"rect":[NSValue valueWithCGRect:(CGRect){{0,0},{0,0}}], @"caption": @"写真アルバムに「PhotoGlass」というアルバムが出来ているはずです。そこにモザイクアートにしたい写真をたくさんいれてください。"},
-                           @{@"rect": [NSValue valueWithCGRect:(CGRect){{35.0f,15.0f},{250.0f,550.0f}}], @"caption": @"この砂時計が、これからあなたのパートナーです。あなたが大切にしたい時間砂が落ち続けます。"},
-                           @{@"rect": [NSValue valueWithCGRect:(CGRect){{40.0f,378.0f},{246.0f,180.0f}}], @"caption": @"これから撮った写真は、ここに溜まっていきます。"},
+                           @{@"rect": [NSValue valueWithCGRect:(CGRect){{140.0f,15.0f},{500.0f,1000.0f}}], @"caption": @"この砂時計が、これからあなたのパートナーです。あなたが大切にしたい時間砂が落ち続けます。"},
+                           @{@"rect": [NSValue valueWithCGRect:(CGRect){{145.0f,675.0f},{500.0f,300.0f}}], @"caption": @"これからは、撮った写真がここに溜まっていきます。"},
                            @{@"rect": [NSValue valueWithCGRect:(CGRect){{0,0},{0,0}}], @"caption": @"楽しかったあの瞬間に戻りたい、と思った時はiPhoneをひっくり返してみてください。(iPhoneの縦向きロックをOFFにしてください)"}
                            ];
         }

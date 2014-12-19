@@ -229,16 +229,16 @@ static const BOOL kEnableContinueLabel = YES;
         
     }else if([[UIScreen mainScreen] bounds].size.height==1024){ //iPad
         if(markIndex == 0|| markIndex == 1){
-            self.lblCaption.frame = (CGRect){{50, 100}, {200, 70}};
+            self.lblCaption.frame = (CGRect){{220, 400}, {350, 70}};
         }
         else if(markIndex  == 2){
-            self.lblCaption.frame = (CGRect){{50, 170}, {200, 90}};
+            self.lblCaption.frame = (CGRect){{220, 400}, {350, 70}};
         }
         else if(markIndex  == 3){
-            self.lblCaption.frame = (CGRect){{50, 200}, {200, 90}};
+            self.lblCaption.frame = (CGRect){{150, 400}, {500, 70}};
         }
         else if(markIndex  == 4){
-            self.lblCaption.frame = (CGRect){{50, 200}, {200, 90}};
+            self.lblCaption.frame = (CGRect){{220, 400}, {350, 70}};
         }
         
     }
