@@ -571,6 +571,8 @@
                                   
                                   
                                   
+                                  
+                                  
                               }else if([[UIScreen mainScreen] bounds].size.height==1024){
                                   
                                   /* --- iPad --- */
@@ -821,8 +823,8 @@
                                           NSLog(@"p %d",p);
                                           NSLog(@"i %d",i);
                                           
-                                          x = 148 +400 *(i/2 + i%2)*n;
-                                          y = 70;
+                                          x = 374 +40 *(i/2 + i%2)*n;
+                                          y = 730;
                                           NSLog(@"y %d",y);
                                           
                                           picImgView = [[UIImageView alloc] initWithFrame:CGRectMake(x, y, 40, 40)];
