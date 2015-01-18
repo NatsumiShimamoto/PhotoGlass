@@ -671,6 +671,7 @@
         
         //SLComposeViewControllerのViewを表示
         [self presentViewController:twitterpostVC animated:YES completion:nil];
+        NSLog(@"twitterok");
         
     }
 }

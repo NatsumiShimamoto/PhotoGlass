@@ -48,6 +48,7 @@
             //        labIndex.layer.borderColor = [UIColor greenColor].CGColor;
             labIndex.font = [UIFont boldSystemFontOfSize:13];
             [self addSubview:labIndex];
+            
         }
     }
     return self;

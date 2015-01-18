@@ -195,18 +195,18 @@ static const BOOL kEnableContinueLabel = YES;
     }
     
     
-    
+    //320
      //CGRect{{x,y},{width,height}}
     
     if([[UIScreen mainScreen] bounds].size.height==480){ //iPhone4,4s,iPod Touch第4世代
         if(markIndex == 0 || markIndex == 1){
-            self.lblCaption.frame = (CGRect){{50, 100}, {230, 70}};
+            self.lblCaption.frame = (CGRect){{55, 100}, {230, 70}};
         }
         else if(markIndex  == 2){
             self.lblCaption.frame = (CGRect){{60, 120}, {200, 70}};
         }
         else if(markIndex  == 3){
-            self.lblCaption.frame = (CGRect){{40, 200}, {250, 70}};
+            self.lblCaption.frame = (CGRect){{35, 200}, {250, 70}};
         }
         else if(markIndex  == 4){
             self.lblCaption.frame = (CGRect){{40, 100}, {240, 70}};
