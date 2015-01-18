@@ -217,21 +217,27 @@
     }
     
     NSMutableArray *mapArray = [@[] mutableCopy];
+    //mapArrayは[番号,X座標,Y座標]って入ってて、それぞれ[0,1,2]で呼び出せる
+    
     NSString *filePath;
-    float imgSize;
+    float imgSize = 0.0;
     if([[UIScreen mainScreen] bounds].size.height==480 || [[UIScreen mainScreen] bounds].size.height==568){
         /* --- iPhone4,4s,iPod Touch第4世代またはiPhone5,5S --- */
         filePath = [[NSBundle mainBundle] pathForResource:@"iphonemap" ofType:@"txt"];
+        //iphonemap.txtを読み込む
         imgSize = 24;
+        
     }else if([[UIScreen mainScreen] bounds].size.height==1024){
         /* --- iPad --- */
         filePath = [[NSBundle mainBundle] pathForResource:@"ipadmap" ofType:@"txt"];
+        //ipad.txtを読み込む
         imgSize = 40;
     }
-    NSString *text = [[NSString alloc] initWithContentsOfFile:filePath usedEncoding:nil error:nil];
+    
+    NSString *text = [[NSString alloc] initWithContentsOfFile:filePath usedEncoding:nil error:nil]; //filePathで読み込んだ文字列をtextに入れる
     //
-    for(NSString *str in [text componentsSeparatedByString:@"\n"]){
-        [mapArray addObject:[str componentsSeparatedByString:@","]];
+    for(NSString *str in [text componentsSeparatedByString:@"\n"]){//.txtの文字列を改行(\n)ごとに区切る
+        [mapArray addObject:[str componentsSeparatedByString:@","]];//改行で区切られた文字列をカンマごとに区切る
     }
     NSLog(@"%@",mapArray);
     
@@ -269,7 +275,7 @@
                       
                       NSTimeInterval  since = [assetDate timeIntervalSinceDate:begin]; //現在時刻からbeginまでの秒数
                       
-                      if(since/(60*60*24) > -100){
+                      if(since/(60*60*24) > -1000){
                           
                           if (nil != result) {
                               
@@ -279,8 +285,10 @@
                               
                               [array  insertObject:[NSNumber numberWithInteger:idx] atIndex:0];
                               
-                              if(idx<34){
+                              if(idx < 36){
                                   picImgView = [[UIImageView alloc] initWithFrame:CGRectMake([mapArray[idx][1] floatValue], [mapArray[idx][2] floatValue], imgSize, imgSize)];
+                                  //mapArrayのidx番目のX座標,mapArrayのidx番目のY座標,imgSize,imgSize
+                                  
                                   UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, imgSize, imgSize)];
                                   label.text = [NSString stringWithFormat:@"%d", idx];
                                   label.backgroundColor = [UIColor colorWithRed:1.0 green:1.0 blue:1.0 alpha:0.5];
@@ -290,7 +298,6 @@
                               
                               //TODO:image
                               picImgView.image = picImg;
-                              picImgView.tag = 500;
                               
                               [self.view addSubview:picImgView];
                               [self picSetting];
@@ -298,8 +305,8 @@
                               [self.view sendSubviewToBack:picImgView];
                               [self.view sendSubviewToBack:backView];
                               
-                              idx += 1;
-                              
+                              idx ++;
+                              NSLog(@"idx is %d",idx);
                           }
                       }
                       
