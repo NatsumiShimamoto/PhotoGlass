@@ -108,8 +108,10 @@
                                   ELCAlbumPickerController *albumController = [[ELCAlbumPickerController alloc] init];
                                   ELCImagePickerController *elcPickerController = [[ELCImagePickerController alloc] initWithRootViewController:albumController];
                                   [albumController setParent:elcPickerController];
-                                  [elcPickerController setImagePickerDelegate:self];
+                           
+                                   [elcPickerController setImagePickerDelegate:self];
                                   
+
                                   [self presentViewController:elcPickerController animated:YES completion:nil];
                               }
                              failureBlock:nil];

@@ -195,7 +195,7 @@ static const BOOL kEnableContinueLabel = YES;
     }
     
     
-    //320
+
      //CGRect{{x,y},{width,height}}
     
     if([[UIScreen mainScreen] bounds].size.height==480){ //iPhone4,4s,iPod Touch第4世代
@@ -214,13 +214,13 @@ static const BOOL kEnableContinueLabel = YES;
         
     }else if([[UIScreen mainScreen] bounds].size.height==568){ //iPhone5,5s,iPod Touch第5世代
         if(markIndex == 0|| markIndex == 1){
-            self.lblCaption.frame = (CGRect){{40, 200}, {220, 70}};
+            self.lblCaption.frame = (CGRect){{50, 200}, {220, 70}};
         }
         else if(markIndex  == 2){
-            self.lblCaption.frame = (CGRect){{40, 170}, {250, 90}};
+            self.lblCaption.frame = (CGRect){{35, 170}, {250, 90}};
         }
         else if(markIndex  == 3){
-            self.lblCaption.frame = (CGRect){{40, 200}, {250, 90}};
+            self.lblCaption.frame = (CGRect){{35, 200}, {250, 90}};
         }
         else if(markIndex  == 4){
             self.lblCaption.frame = (CGRect){{50, 200}, {220, 90}};
@@ -229,16 +229,16 @@ static const BOOL kEnableContinueLabel = YES;
         
     }else if([[UIScreen mainScreen] bounds].size.height==1024){ //iPad
         if(markIndex == 0|| markIndex == 1){
-            self.lblCaption.frame = (CGRect){{220, 400}, {350, 70}};
+            self.lblCaption.frame = (CGRect){{209, 400}, {350, 70}};
         }
         else if(markIndex  == 2){
-            self.lblCaption.frame = (CGRect){{220, 400}, {350, 70}};
+            self.lblCaption.frame = (CGRect){{209, 400}, {350, 70}};
         }
         else if(markIndex  == 3){
-            self.lblCaption.frame = (CGRect){{150, 400}, {500, 70}};
+            self.lblCaption.frame = (CGRect){{134, 400}, {500, 70}};
         }
         else if(markIndex  == 4){
-            self.lblCaption.frame = (CGRect){{220, 400}, {350, 70}};
+            self.lblCaption.frame = (CGRect){{209, 400}, {350, 70}};
         }
         
     }
