@@ -232,7 +232,7 @@
         imgView.image = [Image resize:imgView.image rect:CGRectMake(0,0,70,70)];
         //全部で11×11 = 121枚
     }
-
+    
     
     //モザイクアートの元画像の各ピクセルの色情報をpixelArrに格納する
     [self pixelRGB:imgView.image];
@@ -484,10 +484,55 @@
                                   if(!error){
                                       NSLog(@"保存成功");
                                       [SVProgressHUD showSuccessWithStatus:@"保存成功!"];
+                                      
+                                      
+                                      
+                                      
+                                      
+                                                                           }
+ 
+                                      // コーチマークの表示済フラグ
+                                      BOOL coachMarksShown = [[NSUserDefaults standardUserDefaults] boolForKey:@"WSCoachMarksShown"];
+                                      if (coachMarksShown == NO) {
+                                          // 表示済フラグに「YES」を設定、次回からはコーチマークを表示しない
+                                          [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"WSCoachMarksShown"];
+                                          [[NSUserDefaults standardUserDefaults] synchronize];
+                                          
+                                          
+                                          // コーチマークを表示する
+                                          // コーチマークの設定内容配列を作成
+                                          // コーチマーク毎にカットアウトの位置（CGRect）とキャプション（NSString）のディクショナリ
+                                          
+                                          coachMarks = @[
+                                                         @{@"rect":[NSValue valueWithCGRect:(CGRect){{0,0},{0,0}}], @"caption": @"うおおお"}
+                                                         ];
+                                          
+                                          
+                                          
+                                          
+                                          
+                                          // WSCoachMarksViewオブジェクトの作成
+                                          
+                                          coachMarksView = [[WSCoachMarksView alloc] initWithFrame:self.view.bounds coachMarks:coachMarks];
+                                          // 親ビューに追加
+                                          [self.view addSubview:coachMarksView];
+                                          // コーチマークを表示する
+                                          [coachMarksView start];
+                                          NSLog(@"おいたよ");
+
+                                      
+                                      UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(50,50, 200, 200)];
+                                      imgView.backgroundColor = [UIColor redColor];
+                                      [self.view addSubview:imageView];
+                                      [self.view bringSubviewToFront:imageView];
+                                      
                                   }
                                   
-                                  
                               }
+     
+     
+     
+     
      
      ];
     

@@ -211,6 +211,11 @@ static const BOOL kEnableContinueLabel = YES;
         else if(markIndex  == 4){
             self.lblCaption.frame = (CGRect){{40, 100}, {240, 70}};
         }
+        else if(markIndex  == 5){
+            self.lblCaption.frame = (CGRect){{40, 100}, {240, 70}};
+        }
+
+
         
     }else if([[UIScreen mainScreen] bounds].size.height==568){ //iPhone5,5s,iPod Touch第5世代
         if(markIndex == 0|| markIndex == 1){
@@ -224,7 +229,10 @@ static const BOOL kEnableContinueLabel = YES;
         }
         else if(markIndex  == 4){
             self.lblCaption.frame = (CGRect){{50, 200}, {220, 90}};
+        } else if(markIndex  == 5){
+            self.lblCaption.frame = (CGRect){{40, 100}, {240, 70}};
         }
+
         
         
     }else if([[UIScreen mainScreen] bounds].size.height==1024){ //iPad

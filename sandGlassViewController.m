@@ -108,10 +108,10 @@
                                   ELCAlbumPickerController *albumController = [[ELCAlbumPickerController alloc] init];
                                   ELCImagePickerController *elcPickerController = [[ELCImagePickerController alloc] initWithRootViewController:albumController];
                                   [albumController setParent:elcPickerController];
-                           
-                                   [elcPickerController setImagePickerDelegate:self];
                                   
-
+                                  [elcPickerController setImagePickerDelegate:self];
+                                  
+                                  
                                   [self presentViewController:elcPickerController animated:YES completion:nil];
                               }
                              failureBlock:nil];
@@ -130,10 +130,10 @@
         
         if([[UIScreen mainScreen] bounds].size.height==480){ //iPhone4,4s,iPod Touch第4世代
             coachMarks = @[
-                           @{@"rect":[NSValue valueWithCGRect:(CGRect){{0,0},{0,0}}], @"caption": @"はじめまして。あなたの青春がもっと輝くようなお手伝いをします。"},
+                           @{@"rect":[NSValue valueWithCGRect:(CGRect){{0,0},{0,0}}], @"caption": @"はじめまして。あなたの青春がもっと輝くためのお手伝いをします。"},
                            @{@"rect":[NSValue valueWithCGRect:(CGRect){{0,0},{0,0}}], @"caption": @"写真アルバムに「PhotoGlass」というアルバムが出来ているはずです。そこにモザイクアートにしたい写真をたくさんいれてください。"},
-                           @{@"rect": [NSValue valueWithCGRect:(CGRect){{35.0f,10.0f},{250.0f,460.0f}}], @"caption": @"この砂時計が、これからあなたのパートナーです。あなたが大切にしたい時間砂が落ち続けます。"},
-                           @{@"rect": [NSValue valueWithCGRect:(CGRect){{40.0f,370.0f},{246.0f,100.0f}}], @"caption": @"これから撮った写真は、ここに溜まっていきます。"},
+                           @{@"rect": [NSValue valueWithCGRect:(CGRect){{35.0f,10.0f},{250.0f,460.0f}}], @"caption": @"この砂時計が、これからあなたのパートナーです。"},
+                           @{@"rect": [NSValue valueWithCGRect:(CGRect){{40.0f,370.0f},{246.0f,100.0f}}], @"caption": @"撮った写真は、ここに溜まっていきます。"},
                            @{@"rect": [NSValue valueWithCGRect:(CGRect){{0,0},{0,0}}], @"caption": @"楽しかったあの瞬間に5りたい、と思った時はiPhoneをひっくり返してみてください。(iPhoneの縦向きロックをOFFにしてください)"}
                            ];
             
@@ -291,11 +291,6 @@
                                   picImgView = [[UIImageView alloc] initWithFrame:CGRectMake([mapArray[idx][1] floatValue], [mapArray[idx][2] floatValue], imgSize, imgSize)];
                                   //mapArrayのidx番目のX座標,mapArrayのidx番目のY座標,imgSize,imgSize
                                   
-                                  UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, imgSize, imgSize)];
-                                  label.text = [NSString stringWithFormat:@"%d", idx];
-                                  label.backgroundColor = [UIColor colorWithRed:1.0 green:1.0 blue:1.0 alpha:0.5];
-                                  label.textAlignment = NSTextAlignmentCenter;
-                                  [picImgView addSubview:label];
                               }
                               
                               //TODO:image
