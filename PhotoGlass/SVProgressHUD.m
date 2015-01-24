@@ -235,6 +235,9 @@ static const CGFloat SVProgressHUDParallaxDepthPoints = 10;
             [[UIColor colorWithWhite:0 alpha:0.5] set];
             CGContextFillRect(context, self.bounds);
             break;
+            
+            default:
+            break;
         }
             
         case SVProgressHUDMaskTypeGradient: {
@@ -403,7 +406,7 @@ static const CGFloat SVProgressHUDParallaxDepthPoints = 10;
 - (void)positionHUD:(NSNotification*)notification {
     
     CGFloat keyboardHeight;
-    double animationDuration;
+    double animationDuration = 0.0;
     UIInterfaceOrientation orientation = [[UIApplication sharedApplication] statusBarOrientation];
     // no transforms applied to window in iOS 8, but only if compiled with iOS 8 sdk as base sdk, otherwise system supports old rotation logic.
     BOOL ignoreOrientation = NO;
