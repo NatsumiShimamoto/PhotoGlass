@@ -509,20 +509,22 @@
                                       if([[UIScreen mainScreen] bounds].size.height==480){ //iPhone4,4s,iPod Touch第4世代
                                          
                                           coachMarks = @[
-                                                         @{@"rect":[NSValue valueWithCGRect:(CGRect){{0,70},{320,320}}], @"caption": @"うおおお"}
+                                                         @{@"rect":[NSValue valueWithCGRect:(CGRect){{0,70},{320,320}}], @"caption": @"モザイクアートが完成しました！"}
                                                          ];
                                           
 
                                       }else if([[UIScreen mainScreen] bounds].size.height==568){ //iPhone5,5s,iPod Touch第5世代
                                           coachMarks = @[
-                                                     @{@"rect":[NSValue valueWithCGRect:(CGRect){{0,110},{320,320}}], @"caption": @"うおおお"}
+                                                     @{@"rect":[NSValue valueWithCGRect:(CGRect){{0,110},{320,320}}], @"caption": @"モザイクアートが完成しました！"}
                                                      ];
                                       
 
                                           
                                       }else if([[UIScreen mainScreen] bounds].size.height==1024){ //iPad
-                                         
-                                          
+                                          coachMarks = @[
+                                                         @{@"rect":[NSValue valueWithCGRect:(CGRect){{0,110},{320,320}}], @"caption": @"モザイクアートが完成しました！"}
+                                                         ];
+                                    
                                       }
 
                                                                           
