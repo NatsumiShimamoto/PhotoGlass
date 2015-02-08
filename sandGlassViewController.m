@@ -59,12 +59,20 @@
         backView = [[UIImageView alloc] initWithImage:back];
         backView.frame = CGRectMake(0, 0, 320, 568);
         
+       /* button = [UIButton buttonWithType:UIButtonTypeCustom];
+        button.frame = CGRectMake(300, 500, 50, 50);
+        [button setTitle:@"押してね" forState:UIControlStateNormal];
+    
+        */
     }else if([[UIScreen mainScreen] bounds].size.height==1024){ //iPad
         back = [UIImage imageNamed:@"sandglass_iPad.png"];
         backView = [[UIImageView alloc] initWithImage:back];
         backView.frame = CGRectMake(0, 0, 768, 1024);
     }
     
+    //[button addTarget:self action:@selector(buttonPushed)forControlEvents:UIControlEventTouchUpInside];
+    //[self.view addSubview:button];
+
     
     //gifアニメーション
     UIImage *sunaImage = [UIImage animatedGIFNamed:@"砂"];
@@ -74,12 +82,8 @@
     [self.view addSubview:backView];
     [self.view addSubview:sunaImageView];
     
-    //端末回転通知の開始
-    [[UIDevice currentDevice] beginGeneratingDeviceOrientationNotifications];
-    [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(didRotate:)
-                                                 name:UIDeviceOrientationDidChangeNotification
-                                               object:nil];
+    
+    
     
     //UIImagePickerController
     _pickerController =[[UIImagePickerController alloc] init];
@@ -302,6 +306,9 @@
                               [self.view sendSubviewToBack:picImgView];
                               [self.view sendSubviewToBack:backView];
                               
+                              picImgView.userInteractionEnabled = YES;
+                              picImgView.tag = 1;
+                              
                               idx ++;
                               NSLog(@"idx is %d",idx);
                           }
@@ -348,40 +355,28 @@
 
 
 //端末の向きの取得
-- (void)didRotate:(NSNotification *)notification
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
-    UIDeviceOrientation orientation = (UIDeviceOrientation)[[notification object] orientation];
+    UITouch *touch = [touches anyObject];
     
-    if (orientation==UIDeviceOrientationPortraitUpsideDown) {
-        _orientation = @"縦(上下逆)";
-        
-        NSLog(@"がめんせんいー");
-        mosaicViewController *mosaicViewViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"mosaic"];
+    mosaicViewController *mosaicViewViewController;
+    
+    switch (touch.view.tag) {
+        case 1:
+            NSLog(@"がめんせんいー");
+        mosaicViewViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"mosaic"];
         mosaicViewViewController.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
+    
         [self presentViewController:mosaicViewViewController animated:YES completion:nil];
-        
-        
-        
-    }else if (orientation == UIDeviceOrientationPortrait) {
-        _orientation = @"縦";
-        
+            
+            break;
+            
+        default:
+            break;
     }
     
     
 }
 
-- (BOOL)shouldAutorotate
-{
-    return YES;//回転許可
-}
-
-//回転する方向の指定
-- (NSUInteger)supportedInterfaceOrientations
-{
-    //全方位回転
-    //Portrait(HomeButtonが下)のみ
-    return UIInterfaceOrientationMaskPortrait;
-    
-}
 
 @end

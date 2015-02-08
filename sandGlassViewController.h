@@ -26,6 +26,8 @@
     UIImageView *sunaupImageView;
     UIImageView *upsandView;
     
+    UIButton *button;
+    
     NSDate *assetDate;
     
     NSInteger assetYear;
@@ -37,7 +39,6 @@
     
     NSString *AlbumSandName;
     NSString *_AlbumName;
-    NSString *_orientation;
     NSString *_albumWasFound;
     UIImagePickerController *_pickerController;
     
