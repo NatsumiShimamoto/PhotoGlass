@@ -481,82 +481,9 @@
                                   if(!error){
                                       NSLog(@"保存成功");
                                       [SVProgressHUD showSuccessWithStatus:@"保存成功!"];
-                                      
-                                  
-                                  
-                                 
-
-                                  
-                                  // コーチマークの表示済フラグ
-                                  BOOL coachMarksShown = [[NSUserDefaults standardUserDefaults] boolForKey:@"WSCoachMarksShown"];
-                                  
-                                  if (coachMarksShown) {
-                                      NSLog(@"いえす");
-                                  } else {
-                                      NSLog(@"のー");
-                                  }
-                                  
-                                  
-                                  if (coachMarksShown == NO) {
-                                      // 表示済フラグに「YES」を設定、次回からはコーチマークを表示しない
-                                      [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"WSCoachMarksShown"];
-                                      [[NSUserDefaults standardUserDefaults] synchronize];
-                                      
-                                      
-                                      // コーチマークを表示する
-                                      // コーチマークの設定内容配列を作成
-                                      // コーチマーク毎にカットアウトの位置（CGRect）とキャプション（NSString）のディクショナリ
-                                      if([[UIScreen mainScreen] bounds].size.height==480){ //iPhone4,4s,iPod Touch第4世代
-                                         
-                                          coachMarks = @[
-                                                         @{@"rect":[NSValue valueWithCGRect:(CGRect){{0,70},{320,320}}], @"caption": @"モザイクアートが完成しました！"}
-                                                         ];
-                                          
-
-                                      }else if([[UIScreen mainScreen] bounds].size.height==568){ //iPhone5,5s,iPod Touch第5世代
-                                          coachMarks = @[
-                                                     @{@"rect":[NSValue valueWithCGRect:(CGRect){{0,110},{320,320}}], @"caption": @"モザイクアートが完成しました！"}
-                                                     ];
-                                      
-
-                                          
-                                      }else if([[UIScreen mainScreen] bounds].size.height==1024){ //iPad
-                                          coachMarks = @[
-                                                         @{@"rect":[NSValue valueWithCGRect:(CGRect){{0,110},{320,320}}], @"caption": @"モザイクアートが完成しました！"}
-                                                         ];
-                                    
-                                      }
-
-                                                                          
-                                      
-                                      
-                                      
-                                      // WSCoachMarksViewオブジェクトの作成
-                                      
-                                      coachMarksView = [[WSCoachMarksView alloc] initWithFrame:self.view.bounds coachMarks:coachMarks];
-                                      // 親ビューに追加
-                                      [self.view addSubview:coachMarksView];
-                                      // コーチマークを表示する
-                                      [coachMarksView start];
-                                      
-                                      
-                                      
-                                  }
-                                   if (coachMarksShown) {
-                                          NSLog(@"YESsssss( ･ω･)");
-                                      } else {
-                                          NSLog(@"NOoooo( ･ω･)");
-                                      }
-
                               }
                               }
-     
-     
-     
-     
      ];
-    
-    
 }
 
 -(BOOL)canBecomeFirstResponder { return YES; }

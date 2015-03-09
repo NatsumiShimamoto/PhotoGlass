@@ -87,7 +87,10 @@
     
     //UIImagePickerController
     _pickerController =[[UIImagePickerController alloc] init];
-    if([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]){_pickerController.sourceType = UIImagePickerControllerSourceTypeCamera;}
+    if([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera])
+    {
+        _pickerController.sourceType = UIImagePickerControllerSourceTypeCamera;
+    }
     _pickerController.delegate = self;
     _pickerController.allowsEditing = YES;
     
@@ -100,7 +103,6 @@
     [_library addAssetsGroupAlbumWithName:_AlbumName
                               resultBlock: ^(ALAssetsGroup *group) {
                                   // アルバムが既に存在する場合、group には nil が入る
-                                  
                                   if (group == nil) {
                                       return;
                                   }
@@ -138,7 +140,7 @@
                            @{@"rect":[NSValue valueWithCGRect:(CGRect){{0,0},{0,0}}], @"caption": @"写真アルバムに「PhotoGlass」というアルバムが出来ているはずです。そこにモザイクアートにしたい写真をたくさんいれてください。"},
                            @{@"rect": [NSValue valueWithCGRect:(CGRect){{35.0f,10.0f},{250.0f,460.0f}}], @"caption": @"この砂時計が、これからあなたのパートナーです。"},
                            @{@"rect": [NSValue valueWithCGRect:(CGRect){{40.0f,370.0f},{246.0f,100.0f}}], @"caption": @"撮った写真は、ここに溜まっていきます。"},
-                           @{@"rect": [NSValue valueWithCGRect:(CGRect){{40.0f,370.0f},{246.0f,100.0f}}], @"caption": @"写真をタップするとモザイクアートの制作スタートです！"}
+                           @{@"rect": [NSValue valueWithCGRect:(CGRect){{40.0f,370.0f},{246.0f,100.0f}}], @"caption": @"写真をタップするとモザイクアートの作成スタートです！"}
                            ];
             
         }else if([[UIScreen mainScreen] bounds].size.height==568){ //iPhone5,5s,iPod
@@ -147,7 +149,7 @@
                            @{@"rect":[NSValue valueWithCGRect:(CGRect){{0,0},{0,0}}], @"caption": @"写真アルバムに「PhotoGlass」というアルバムが出来ているはずです。そこにモザイクアートにしたい写真をたくさんいれてください。"},
                            @{@"rect": [NSValue valueWithCGRect:(CGRect){{35.0f,10.0f},{250.0f,550.0f}}], @"caption": @"この砂時計が、これからあなたのパートナーです。あなたが大切にしたい時間砂が落ち続けます。"},
                            @{@"rect": [NSValue valueWithCGRect:(CGRect){{40.0f,378.0f},{246.0f,180.0f}}], @"caption": @"これから撮った写真は、ここに溜まっていきます。"},
-                           @{@"rect": [NSValue valueWithCGRect:(CGRect){{40.0f,378.0f},{246.0f,180.0f}}], @"caption": @"写真をタップするとモザイクアートの制作スタートです！"}
+                           @{@"rect": [NSValue valueWithCGRect:(CGRect){{40.0f,378.0f},{246.0f,180.0f}}], @"caption": @"写真をタップするとモザイクアートの作成スタートです！"}
                            ];
             
         }else if([[UIScreen mainScreen] bounds].size.height==1024){ //iPad
@@ -156,7 +158,7 @@
                            @{@"rect":[NSValue valueWithCGRect:(CGRect){{0,0},{0,0}}], @"caption": @"写真アルバムに「PhotoGlass」というアルバムが出来ているはずです。そこにモザイクアートにしたい写真をたくさんいれてください。"},
                            @{@"rect": [NSValue valueWithCGRect:(CGRect){{140.0f,15.0f},{500.0f,1000.0f}}], @"caption": @"この砂時計が、これからあなたのパートナーです。あなたが大切にしたい時間砂が落ち続けます。"},
                            @{@"rect": [NSValue valueWithCGRect:(CGRect){{145.0f,675.0f},{500.0f,300.0f}}], @"caption": @"これからは、撮った写真がここに溜まっていきます。"},
-                           @{@"rect": [NSValue valueWithCGRect:(CGRect){{145.0f,675.0f},{500.0f,300.0f}}], @"caption": @"写真をタップするとモザイクアートの制作スタートです！"}
+                           @{@"rect": [NSValue valueWithCGRect:(CGRect){{145.0f,675.0f},{500.0f,300.0f}}], @"caption": @"写真をタップするとモザイクアートの作成スタートです！"}
                            ];
         }
         
