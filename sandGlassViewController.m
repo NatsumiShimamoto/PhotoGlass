@@ -163,9 +163,6 @@
         }
         
         
-        
-        
-        
         // WSCoachMarksViewオブジェクトの作成
         
         coachMarksView = [[WSCoachMarksView alloc] initWithFrame:self.view.bounds coachMarks:coachMarks];
